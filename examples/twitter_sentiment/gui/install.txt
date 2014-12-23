@@ -1,0 +1,42 @@
+Twitter Sentiment Demo: Web Server and GUI Installation and Porting
+
+
+Initial Installation:
+* cd ~ (substitute your directory of choice)
+* mkdir twitter_demo
+* cd twitter_demo
+* mkdir gui
+* cd gui
+* sudo yum install nodejs (or your choice of package installer)
+* sudo yum install npm
+* sudo npm install express
+* sudo npm install socket.io
+* Copy code into directory or untar source tarball; should include:
+    - aster_data.csv
+    - d3.min.js
+    - draw.js
+    - gradient.jpeg
+    - index.html
+    - install.txt
+    - sample_data1.csv
+    - sample_data2.csv
+    - sample_data3.csv
+    - socket.io.js
+    - style.css
+    - test_demo.sh
+    - twit_srv.js
+* May need to configure firewall to open a port for the demo (port 80 default)
+
+
+Running:
+* Optional: Edit twit_srv.js to edit the listen port if needed
+* sudo node twit_srv.js
+    - The web server should now be operational and will display a d3-based
+      visualization on the web browser if aster_data.csv has real data
+
+
+Testing/Demo:
+* ./test_demo.sh will run a series of 3 sample data files on a 3 second delay
+  to show the d3 visualization update automatically
+    - Note: The data_parse directory code should be halted before running
+      this demo.

@@ -1,0 +1,35 @@
+Twitter Sentiment Demo: Data Parsing Routines
+
+
+Initial Installation:
+* cd ~ (substitute your directory of choice)
+* mkdir twitter_demo (if it does not exist already)
+* cd twitter_demo
+* mkdir hdfs_results
+* cd hdfs_results
+* mkdir sentiment
+* cd ../..
+* mkdir data_parse
+* cd data_parse
+* [make sure Python is installed]
+* Copy code into directory or untar source tarball; should include:
+    - agg_sent.py
+    - data_loop.sh
+    - install.txt
+
+The final directory structure should look like this:
+* twitter_demo/
+* twitter_demo/data_parse
+* twitter_demo/gui
+* twitter_demo/hdfs_results
+* twitter_demo/hdfs_results/sentiment
+
+Running:
+* Optional: Edit data_loop.sh to change sleep time (if 10 sec does not work)
+* ./data_loop.sh
+
+data_loop.sh will pick up data from HDFS and write it into a normal file
+system.  Then it will parse the data, turn it into aster_data.csv which
+Node.js will automatically detect.  Node.js will then push a websockets
+command to the browser(s) and pick up the new aster_data.csv for
+visualization.

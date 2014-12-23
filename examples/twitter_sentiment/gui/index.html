@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<!--
+Copyright 2014 Rackspace Inc.
+All Rights Reserved
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.
+
+This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
+THE PROVIDER makes no representations or warranties of any kind concerning the
+safety, suitability, lack of viruses, inaccuracies, typographical errors, or
+other harmful components of this SOFTWARE PRODUCT. There are inherent dangers
+in the use of any software, and you are solely responsible for determining
+whether this SOFTWARE PRODUCT is compatible with your equipment and other
+software installed on your equipment. You are also solely responsible for the
+protection of your equipment and backup of your data, and THE PROVIDER will
+not be liable for any damages you may suffer in connection with using,
+modifying, or distributing this SOFTWARE PRODUCT.
+-->
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script src="d3.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="draw.js" ></script>
+<script>
+   // Initialize the aster chart with data on load
+   d3.csv('aster_data.csv', function(data) {
+       send_chart(data);
+   });
+</script>
+</div>
+</p>
+<script>
+    // Server to client command to re-read the aster chart data and
+    // change background color if desired.
+    var socket = io();
+    socket.on('command', function(msg){
+        d3.select("body").style("background-color", msg);
+        d3.selectAll("g").remove();
+        d3.csv('aster_data.csv', function(data) {
+            send_chart(data);
+        });
+    });
+
+    // When the server sends some tweets, display on the screen
+    socket.on('tweets', function(msg){
+      tweets=document.getElementById("tweets");
+      tweets.value = msg + tweets.value;
+    });
+    // If the server sends this command, remove all tweets from the screen
+    socket.on('cleartweets', function(msg){
+      tweets=document.getElementById("tweets");
+      tweets.value="";
+    });
+</script>
+<br><br>
+<p>
+<table><tr>
+<td><svg width="500" height="500"></svg></td>
+<td>
+<textarea readonly rows="500" cols="150" id="tweets" wrap="off"
+    style="max-height:500px;max-width:500px;min-height:100px; resize: none">Live Twitter Feed...</textarea>
+</td>
+</tr>
+<tr>
+    <td><div align="center">
+        <b>Twitter Sentiment Color Key:</b><br>
+        <img src="gradient.jpg" width="150" height="30"><br>
+        Low ----------> More Favorable
+    </div></td>
+<td></td>
+</tr>
+</table>
+</p>
+</body>
+</html>
