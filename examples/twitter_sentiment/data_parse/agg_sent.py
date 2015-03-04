@@ -70,8 +70,12 @@ def get_tweet_data(file_path):
             if list_len < 5:
                 continue
             # get score delta
-            score_delta = float(word_list[list_len-3]) - (
-                float(word_list[list_len-2]))
+            try:
+                score_delta = float(word_list[list_len-3]) - (
+                    float(word_list[list_len-2]))
+            except:
+                score_delta = 0
+
             # get the tweet text
             start_loc = line.index(',') + 1
             end_loc = line.index(word_list[list_len-3], start_loc) - 1
