@@ -1,0 +1,228 @@
+/**
+ * Short description using Doxygen-style comment format
+ *
+ */
+
+/* ==========================================================================
+   Page
+   ========================================================================== */
+    html, body {
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }
+
+   .wrapper {
+      width: 1260px;
+      margin: 0 auto;
+   }
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+    .header {
+      height: 60px;
+      background: #000;
+    }
+
+    .header .wrapper {
+      font-size: 40px;
+      color: #fff;
+    }
+
+    .header .logo {
+      background-image: url(https://752f77aa107738c25d93-f083e9a6295a3f0714fa019ffdca65c3.ssl.cf1.rackcdn.com/navigation/rackspace-logo-tagline-simplified.svg);
+      background-color: #c40022;
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      background-size: 140px 41px;
+      float: left;
+      height: 60px;
+      position: relative;
+      width: 160px;
+      padding: 10px 12px 9px;
+    }
+
+    .header-text {
+      float: left;
+      margin: 2px 0 0 20px;
+    }
+
+/* ==========================================================================
+   Body
+   ========================================================================== */
+    .main.wrapper {
+      padding: 20px 0 10px 0px;
+    }
+
+    .tab-font {
+      font-size: 19px;
+    }
+
+    .tab-content {
+      background: #fff;
+      border: 1px solid #999;
+      border-radius: 0`px;
+      padding: 20px;
+      min-height: 718px;
+    }
+
+    .nav-tabs {
+      border-bottom: 0px;
+      font-size: 15px;
+    }
+
+    .nav-tabs>li>a {
+      border: 0px;
+      border-radius: 0;
+      background: #ddd;
+      color: #000;
+      border: 1px solid #999;
+      border-bottom: 1px solid #ddd;
+      padding: 7px 15px 4px;
+    }
+
+    .nav-tabs>li>a:focus,
+    .nav-tabs>li>a:hover {
+      background-color: #999;
+      color: #fff;
+      border-bottom: 1px solid #999;
+    }
+
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover {
+      color: #c40022;
+      cursor: default;
+      background-color: #fff;
+      border: 1px solid #999;
+      border-bottom-color: #fff;
+    }
+
+    .description {
+      color: #999;
+      font-style: italic;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+/* ==========================================================================
+   Graph View
+   ========================================================================== */
+   #myChart {
+     width: 1200px;
+     height: 600px;
+     margin-top: 54px;
+   }
+
+/* ==========================================================================
+   Heat Map View
+   ========================================================================== */
+    #map {
+      width: 1218px;
+      height: 600px;
+      border: 1px solid #999;
+    }
+
+    .heat-button-wrapper {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+
+    .heat-button-label {
+      float: left;
+      font-weight: bold;
+    }
+
+    .heat-button-input {
+      float: left;
+      margin: 0 0 0 10px !important;
+    }
+
+/* ==========================================================================
+   List View
+   ========================================================================== */
+    .list-column {
+      float: left;
+      width: 33.33333%;
+    }
+
+    .list-column-left {
+      /* border-right: 1px solid #ddd; */
+    }
+
+    .list-column-header {
+      /* border-bottom: 1px solid #ddd; */
+      text-align: center;
+      color: #BBBBBB;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .tweet-wrapper {
+      margin-bottom: 20px;
+      background-color:rgba(255, 255, 255, 0.5);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    #negativeTweets {
+      padding: 10px;
+      background: #EDB2BD;
+      height:100%;
+      min-height: 632px;
+      border: 1px solid #666;
+      border-right: 0px;
+    }
+
+    #neutralTweets {
+      padding: 10px;
+      background: #D1D1D1;
+      height:100%;
+      min-height: 632px;
+      border: 1px solid #666;
+    }
+
+    #positiveTweets {
+      padding: 10px;
+      background: #CEE6BE;
+      height:100%;
+      min-height: 632px;
+      border: 1px solid #666;
+      border-left: 0px;
+    }
+
+    #negativeTweets .tweet-wrapper {
+      border: 1px solid #c40022;
+    }
+
+    #neutralTweets .tweet-wrapper {
+      border: 1px solid #666;
+    }
+
+    #positiveTweets .tweet-wrapper {
+      border: 1px solid #5aaa28;
+    }
+
+    .twitter-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+    }
+
+    .twitter-image {
+      float: left;
+      width: 10%;
+    }
+
+    .twitter-text {
+      margin-left: 2%;
+      float: left;
+      width: 88%;
+    }
+
+    .twitter-display-name {
+      font-weight: bold;
+    }
+
+    .twitter-meta {
+      color: #000;
+    }
