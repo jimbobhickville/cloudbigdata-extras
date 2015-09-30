@@ -5,8 +5,8 @@ var fs     = require('fs');
 var kafka  = require('kafka-node');
 
 var queue         = [];
-var queue_size    = 200;
-var dump_interval = 60000;
+var queue_size    = 150;
+var dump_interval = 30000;
 var dump_timeout;
 var zk_port       = 2181;
 var zk_nodes      = [1, 2, 3].map(function (i) { return 'zookeeper-' + i + '.local:' + zk_port});
