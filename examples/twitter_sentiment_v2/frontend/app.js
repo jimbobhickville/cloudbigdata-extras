@@ -5,12 +5,18 @@ var fs     = require('fs');
 var kafka  = require('kafka-node');
 
 var queue         = [];
-var queue_size    = 200;
-var dump_interval = 60000;
+var queue_size    = 150;
+var dump_interval = 30000;
 var dump_timeout;
 var zk_port       = 2181;
 var zk_nodes      = [1, 2, 3].map(function (i) { return 'zookeeper-' + i + '.local:' + zk_port});
+var tweet_cache_json;
+var tweet_cache_path = '/tmp/tweet_cache.json';
 
+if (fs.existsSync(tweet_cache_path)) {
+    tweet_cache_json = fs.readFileSync(tweet_cache_path);
+    io.sockets.emit('tweets', tweet_cache_json);
+}
 
 var classifications = {
     '0': 'negative',
@@ -40,7 +46,9 @@ function classify(messages) {
 function dump_queue() {
     if (queue.length > 0) {
         console.log("Emitting queue to UI");
-        io.sockets.emit('tweets', JSON.stringify(classify(queue)));
+        tweet_cache_json = JSON.stringify(classify(queue))
+        fs.writeFile(tweet_cache_path, tweet_cache_json);
+        io.sockets.emit('tweets', tweet_cache_json);
         queue = [];
     }
     dump_timeout = setTimeout(dump_queue, dump_interval);
@@ -48,30 +56,51 @@ function dump_queue() {
 
 dump_timeout = setTimeout(dump_queue, dump_interval);
 
-var kafka_connection_str = zk_nodes.join(',');
-var kafka_client = new kafka.Client(kafka_connection_str,
+var kafka_consumer;
+var reset_kafka;
+reset_kafka = function () {
+    var kafka_connection_str = zk_nodes.join(',');
+    var kafka_client = new kafka.Client(kafka_connection_str,
                                     'sentiment-analysis',
                                     { 'retries': 10 });
-var kafka_consumer = new kafka.HighLevelConsumer(kafka_client, [{
-   topic: 'scored-tweets'
-}]);
-kafka_consumer.on('message', function (message) {
-    console.log("Got message from kafka:", message)
-    if (queue.length >= queue_size) {
-        clearTimeout(dump_timeout);
-        dump_queue();
-    }
-    try {
-        queue.push(JSON.parse(message['value']));
-    }
-    catch (e) {
-        console.log("ERROR parsing JSON:", e)
-    }
-});
+    var on_error = function (error) {
+        console.log("Got kafka error:", error);
+        if (kafka_consumer) {
+            kafka_consumer.close();
+        }
+        kafka_client.close();
+        reset_kafka();
+    };
+    kafka_client.on('error', on_error);
+
+    kafka_consumer = new kafka.HighLevelConsumer(kafka_client, [{
+       topic: 'scored-tweets'
+    }]);
+    kafka_consumer.on('message', function (message) {
+        console.log("Got message from kafka:", message)
+        if (queue.length >= queue_size) {
+            clearTimeout(dump_timeout);
+            dump_queue();
+        }
+        try {
+            queue.push(JSON.parse(message['value']));
+        }
+        catch (e) {
+            console.log("ERROR parsing JSON:", e)
+        }
+    });
+    kafka_consumer.on('error', on_error);
+}
+
+reset_kafka();
 
 // URL handlers, only this white list of resources are accessible
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/tweet_cache.json', function(req, res){
+  res.sendFile(tweet_cache_path);
 });
 
 app.get('/css/main.css', function(req, res){

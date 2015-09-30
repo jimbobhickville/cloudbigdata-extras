@@ -8,13 +8,17 @@
     <script>
       var socket = io();
 
-      socket.on('tweets', function (data) {
-        var tweets = JSON.parse(data);
+      function updateAll(tweets) {
         writeTweets(tweets);
         mapReboot(tweets);
-        initMap();
-        rebuildChart(tweets);
+        buildChartData(tweets);
+      }
+
+      socket.on('tweets', function (data) {
+        var tweets = JSON.parse(data);
+        updateAll(tweets);
       });
+      $.getJSON('/tweet_cache.json', updateAll);
     </script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" >

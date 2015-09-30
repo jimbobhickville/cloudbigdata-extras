@@ -88,6 +88,7 @@ function mapReboot(data){
         }
     }
   }
+  initMap();
 }
 
 $('#heatMapTab').on('shown.bs.tab', function (e) {
