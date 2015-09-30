@@ -10,7 +10,13 @@ var dump_interval = 60000;
 var dump_timeout;
 var zk_port       = 2181;
 var zk_nodes      = [1, 2, 3].map(function (i) { return 'zookeeper-' + i + '.local:' + zk_port});
+var tweet_cache_json;
+var tweet_cache_path = '/tmp/tweet_cache.json';
 
+if (fs.existsSync(tweet_cache_path)) {
+    tweet_cache_json = fs.readFileSync(tweet_cache_path);
+    io.sockets.emit('tweets', tweet_cache_json);
+}
 
 var classifications = {
     '0': 'negative',
@@ -40,7 +46,9 @@ function classify(messages) {
 function dump_queue() {
     if (queue.length > 0) {
         console.log("Emitting queue to UI");
-        io.sockets.emit('tweets', JSON.stringify(classify(queue)));
+        tweet_cache_json = JSON.stringify(classify(queue))
+        fs.writeFile(tweet_cache_path, tweet_cache_json);
+        io.sockets.emit('tweets', tweet_cache_json);
         queue = [];
     }
     dump_timeout = setTimeout(dump_queue, dump_interval);
@@ -72,6 +80,10 @@ kafka_consumer.on('message', function (message) {
 // URL handlers, only this white list of resources are accessible
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/tweet_cache.json', function(req, res){
+  res.sendFile(tweet_cache_path);
 });
 
 app.get('/css/main.css', function(req, res){
