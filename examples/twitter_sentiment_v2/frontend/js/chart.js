@@ -1,4 +1,7 @@
-var ctx, data, options, myRadarChart;
+var ctx, chartData, options, myRadarChart, oldLabels;
+var labelIndex = 0;
+var labelIndexes = {};
+var labels = []
 
 ctx = document.getElementById("myChart").getContext("2d");
 options = {
@@ -6,8 +9,7 @@ options = {
     pointLabelFontColor : "#000",
 };
 
-
-data = {
+chartData = {
     datasets: [
         {
             label: "Positive Sentiment",
@@ -36,21 +38,14 @@ var sentimentIndexes = {
 };
 
 function initChart() {
-    data.labels = ["", "", "", "", ""];
-    data.datasets[0].data = [0,0,0,0,0];
-    data.datasets[1].data = [0,0,0,0,0];
+    chartData.labels = ["", "", "", "", ""];
+    chartData.datasets[0].data = [0,0,0,0,0];
+    chartData.datasets[1].data = [0,0,0,0,0];
 
-    myRadarChart = new Chart(ctx).Radar(data, options);
+    myRadarChart = new Chart(ctx).Radar(chartData, options);
 }
 
-console.log(myRadarChart);
-
-function rebuildChart(tweets) {
-    myRadarChart.destroy();
-
-    var labelIndex = 0;
-    var labelIndexes = {};
-    var labels = []
+function buildChartData(tweets) {
     for (var sentiment in sentimentIndexes) {
         var sentimentIndex = sentimentIndexes[sentiment];
         var sentimentCount = [];
@@ -74,30 +69,42 @@ function rebuildChart(tweets) {
             }
         }
 
-        data.datasets[sentimentIndex].data = sentimentCount;
+        chartData.datasets[sentimentIndex].data = sentimentCount;
     }
 
-    data.labels = labels;
+    oldLabels = chartData.labels;
+    chartData.labels = labels;
 
-    myRadarChart = new Chart(ctx).Radar(data, options);
+    writeChart();
 }
 
-function updateChart(chartData) {
-    for (var i = 0, l=chartData.data.length; i < l; i++) {
-        for (var a = 0, b=chartData.data[i].length; a < b; a++) {
-            myRadarChart.datasets[i].points[a].value = chartData.data[i][a];
+function rebuildChart() {
+    myRadarChart.destroy();
+    myRadarChart = new Chart(ctx).Radar(chartData, options);
+}
+
+function updateChart() {
+    for (var i = 0, l=chartData.datasets.length; i < l; i++) {
+        for (var a = 0, b=chartData.datasets[i].data.length; a < b; a++) {
+            if (myRadarChart.datasets[i].points[a] === undefined) {
+                // somehow there is no existing data even though the labels were a match
+                // go ahead and nuke from orbit
+                rebuildChart();
+                return;
+            }
+            myRadarChart.datasets[i].points[a].value = chartData.datasets[i].data[a];
         }
     }
     myRadarChart.update();
 }
 
-function checkLabels(newLabels) {
-    if (data.labels.length != newLabels.length) {
+function checkLabels() {
+    if (chartData.labels.length != oldLabels.length) {
         return false;
     }
 
-    for (var i = 0, l=labels.length; i < l; i++) {
-        if (labels[i] != newLabels[i]) {
+    for (var i = 0, l=chartData.labels.length; i < l; i++) {
+        if (chartData.labels[i] != oldLabels[i]) {
             return false;
         }
     }
@@ -105,11 +112,11 @@ function checkLabels(newLabels) {
     return true;
 }
 
-function writeChart(chartData) {
-    if(!checkLabels(chartData.labels)) {
-        rebuildChart(chartData);
+function writeChart() {
+    if(!checkLabels()) {
+        rebuildChart();
     } else {
-        updateChart(chartData);
+        updateChart();
     }
 }
 
