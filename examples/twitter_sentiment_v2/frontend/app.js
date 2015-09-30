@@ -56,26 +56,43 @@ function dump_queue() {
 
 dump_timeout = setTimeout(dump_queue, dump_interval);
 
-var kafka_connection_str = zk_nodes.join(',');
-var kafka_client = new kafka.Client(kafka_connection_str,
+var kafka_consumer;
+var reset_kafka;
+reset_kafka = function () {
+    var kafka_connection_str = zk_nodes.join(',');
+    var kafka_client = new kafka.Client(kafka_connection_str,
                                     'sentiment-analysis',
                                     { 'retries': 10 });
-var kafka_consumer = new kafka.HighLevelConsumer(kafka_client, [{
-   topic: 'scored-tweets'
-}]);
-kafka_consumer.on('message', function (message) {
-    console.log("Got message from kafka:", message)
-    if (queue.length >= queue_size) {
-        clearTimeout(dump_timeout);
-        dump_queue();
-    }
-    try {
-        queue.push(JSON.parse(message['value']));
-    }
-    catch (e) {
-        console.log("ERROR parsing JSON:", e)
-    }
-});
+    var on_error = function (error) {
+        console.log("Got kafka error:", error);
+        if (kafka_consumer) {
+            kafka_consumer.close();
+        }
+        kafka_client.close();
+        reset_kafka();
+    };
+    kafka_client.on('error', on_error);
+
+    kafka_consumer = new kafka.HighLevelConsumer(kafka_client, [{
+       topic: 'scored-tweets'
+    }]);
+    kafka_consumer.on('message', function (message) {
+        console.log("Got message from kafka:", message)
+        if (queue.length >= queue_size) {
+            clearTimeout(dump_timeout);
+            dump_queue();
+        }
+        try {
+            queue.push(JSON.parse(message['value']));
+        }
+        catch (e) {
+            console.log("ERROR parsing JSON:", e)
+        }
+    });
+    kafka_consumer.on('error', on_error);
+}
+
+reset_kafka();
 
 // URL handlers, only this white list of resources are accessible
 app.get('/', function(req, res){
