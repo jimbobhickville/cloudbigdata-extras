@@ -1,0 +1,1285 @@
+{
+  "paragraphs": [
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eFaster time to insight using Spark, Tachyon and Zeppelin\u003c/h2\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eNirmal Ranganathan -\u003cspan style\u003d\"color:#9E0000\"\u003e- Rackspace\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n",
+      "dateUpdated": "Oct 1, 2015 4:53:27 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true,
+        "title": false,
+        "lineNumbers": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443669243449_-1511758784",
+      "id": "20151001-031403_2103578302",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eFaster time to insight using Spark, Tachyon and Zeppelin\u003c/h2\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eNirmal Ranganathan -\u003cspan style\u003d\"color:#9E0000\"\u003e- Rackspace\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:14:03 AM",
+      "dateStarted": "Oct 1, 2015 3:17:13 AM",
+      "dateFinished": "Oct 1, 2015 3:17:15 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eFast \u003cspan style\u003d\"color:#9E0000\"\u003e Performance\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eEasy \u003cspan style\u003d\"color:#9E0000\"\u003e Productivity\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eSimple \u003cspan style\u003d\"color:#9E0000\"\u003e Collaboration\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e",
+      "dateUpdated": "Oct 1, 2015 5:00:55 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443669433600_1068476254",
+      "id": "20151001-031713_553201061",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eFast   \u003cspan style\u003d\"color:#9E0000\"\u003e Performance\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eEasy \u003cspan style\u003d\"color:#9E0000\"\u003e Productivity\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eSimple \u003cspan style\u003d\"color:#9E0000\"\u003e Collaboration\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 3:17:13 AM",
+      "dateStarted": "Oct 1, 2015 3:23:33 AM",
+      "dateFinished": "Oct 1, 2015 3:23:33 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003cimg src\u003d\"http://fdb103551f8e4cf72554-30956f896d517e3400d6de2a7427c277.r79.cf5.rackcdn.com/img/SparkStack.png\" height\u003d\"60%\" width\u003d\"60%\"\u003e",
+      "dateUpdated": "Oct 1, 2015 3:55:04 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443669439146_1556737933",
+      "id": "20151001-031719_1201725498",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003cimg src\u003d\"http://fdb103551f8e4cf72554-30956f896d517e3400d6de2a7427c277.r79.cf5.rackcdn.com/img/SparkStack.png\" height\u003d\"60%\" width\u003d\"60%\"\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 3:17:19 AM",
+      "dateStarted": "Oct 1, 2015 3:55:01 AM",
+      "dateFinished": "Oct 1, 2015 3:55:01 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eData Ingestion\u003c/h2\u003e",
+      "dateUpdated": "Oct 1, 2015 4:53:53 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443710612623_-630789795",
+      "id": "20151001-144332_1447465282",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eData Ingestion\u003c/h2\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 2:43:32 PM",
+      "dateStarted": "Oct 1, 2015 4:53:45 PM",
+      "dateFinished": "Oct 1, 2015 4:53:45 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%dep\n\nz.load(\"com.databricks:spark-csv_2.11:1.2.0\")",
+      "dateUpdated": "Oct 1, 2015 11:21:56 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443669443857_996558858",
+      "id": "20151001-031723_1478920581",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "res1: org.apache.zeppelin.spark.dep.Dependency \u003d org.apache.zeppelin.spark.dep.Dependency@35ce5362\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:17:23 AM",
+      "dateStarted": "Oct 1, 2015 11:21:58 AM",
+      "dateFinished": "Oct 1, 2015 11:22:15 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n\n# Download and the data and upload it to HDFS\n\n# Create local directories and HDFS directories as appropriate for your environment\n# NOTE: In this case Zeppelin was run as the \u0027root\u0027 user, if you are running as a different user\n# account for the various permissions on the directories.\nmkdir -p /root/airline\nsudo -u hdfs hdfs dfs -mkdir /airline\nsudo -u hdfs hdfs dfs -chown root:root /airline\n\nfor year in {1987..2008}; do\n    wget -O /root/airline/$year.csv.bz2 http://stat-computing.org/dataexpo/2009/$year.csv.bz2\n    bunzip2 /root/airline/$year.csv.bz2\n    hdfs dfs -copyFromLocal /root/airline/$year.csv /airline/\n    echo \"Completed uploading $year.csv into HDFS\"\ndone",
+      "dateUpdated": "Oct 2, 2015 7:49:16 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443672223565_-134854673",
+      "id": "20151001-040343_242188813",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Completed uploading 1987.csv into HDFS\nCompleted uploading 1988.csv into HDFS\nCompleted uploading 1989.csv into HDFS\nCompleted uploading 1990.csv into HDFS\nCompleted uploading 1991.csv into HDFS\nCompleted uploading 1992.csv into HDFS\nCompleted uploading 1993.csv into HDFS\nCompleted uploading 1994.csv into HDFS\nCompleted uploading 1995.csv into HDFS\nCompleted uploading 1996.csv into HDFS\nCompleted uploading 1997.csv into HDFS\nCompleted uploading 1998.csv into HDFS\nCompleted uploading 1999.csv into HDFS\nCompleted uploading 2000.csv into HDFS\nCompleted uploading 2001.csv into HDFS\nCompleted uploading 2002.csv into HDFS\nCompleted uploading 2003.csv into HDFS\nCompleted uploading 2004.csv into HDFS\nCompleted uploading 2005.csv into HDFS\nCompleted uploading 2006.csv into HDFS\nCompleted uploading 2007.csv into HDFS\nCompleted uploading 2008.csv into HDFS\n"
+      },
+      "dateCreated": "Oct 1, 2015 4:03:43 AM",
+      "dateStarted": "Oct 1, 2015 12:02:14 PM",
+      "dateFinished": "Oct 1, 2015 12:02:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n# Load data from csv file and write it out as parquet\n\nfor year in range(1987, 2009):\n    df \u003d sqlContext.read.format(\u0027com.databricks.spark.csv\u0027) \\\n                        .options(header\u003d\u0027true\u0027) \\\n                        .load(\"hdfs://master-1.local:8020/airline/{0}.csv\".format(year))\n    df.write.parquet(\"tachyon://master-1.local:19998/airline.parquet\", mode\u003d\u0027append\u0027)\n",
+      "dateUpdated": "Oct 1, 2015 4:55:14 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "lineNumbers": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443672334466_548260159",
+      "id": "20151001-040534_1516101874",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Oct 1, 2015 4:05:34 AM",
+      "dateStarted": "Oct 1, 2015 12:17:44 PM",
+      "dateFinished": "Oct 1, 2015 12:31:33 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eData Exploration - Spark DataFrames\u003c/h2\u003e",
+      "dateUpdated": "Oct 1, 2015 4:56:55 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443718470254_1929623990",
+      "id": "20151001-165430_1921899142",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eData Exploration - Spark DataFrames\u003c/h2\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 4:54:30 PM",
+      "dateStarted": "Oct 1, 2015 4:56:52 PM",
+      "dateFinished": "Oct 1, 2015 4:56:52 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n# Now lets read data from the parquet files\n\nairdf \u003d sqlContext.read.parquet(\"hdfs://master-1.local:8020/airline.parquet\")\n\n\n# Perform some basic operations\n\nprint airdf.count()\nairdf.printSchema()",
+      "dateUpdated": "Oct 1, 2015 6:15:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443672446894_1514870345",
+      "id": "20151001-040726_1859092826",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "123534969\nroot\n |-- Year: string (nullable \u003d true)\n |-- Month: string (nullable \u003d true)\n |-- DayofMonth: string (nullable \u003d true)\n |-- DayOfWeek: string (nullable \u003d true)\n |-- DepTime: string (nullable \u003d true)\n |-- CRSDepTime: string (nullable \u003d true)\n |-- ArrTime: string (nullable \u003d true)\n |-- CRSArrTime: string (nullable \u003d true)\n |-- UniqueCarrier: string (nullable \u003d true)\n |-- FlightNum: string (nullable \u003d true)\n |-- TailNum: string (nullable \u003d true)\n |-- ActualElapsedTime: string (nullable \u003d true)\n |-- CRSElapsedTime: string (nullable \u003d true)\n |-- AirTime: string (nullable \u003d true)\n |-- ArrDelay: string (nullable \u003d true)\n |-- DepDelay: string (nullable \u003d true)\n |-- Origin: string (nullable \u003d true)\n |-- Dest: string (nullable \u003d true)\n |-- Distance: string (nullable \u003d true)\n |-- TaxiIn: string (nullable \u003d true)\n |-- TaxiOut: string (nullable \u003d true)\n |-- Cancelled: string (nullable \u003d true)\n |-- CancellationCode: string (nullable \u003d true)\n |-- Diverted: string (nullable \u003d true)\n |-- CarrierDelay: string (nullable \u003d true)\n |-- WeatherDelay: string (nullable \u003d true)\n |-- NASDelay: string (nullable \u003d true)\n |-- SecurityDelay: string (nullable \u003d true)\n |-- LateAircraftDelay: string (nullable \u003d true)\n\n"
+      },
+      "dateCreated": "Oct 1, 2015 4:07:26 AM",
+      "dateStarted": "Oct 1, 2015 6:15:19 PM",
+      "dateFinished": "Oct 1, 2015 6:15:21 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n# Lets sample the data to get a feel for what we are exploring\n\nsampled_rows \u003d df.sample(True, 0.000001)\n\nfor row in sampled_rows.collect():\n    print \"{}\\n\".format(row)\n\n",
+      "dateUpdated": "Oct 1, 2015 6:16:17 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443672567150_-1402879778",
+      "id": "20151001-040927_891151957",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Row(Year\u003du\u00272008\u0027, Month\u003du\u00271\u0027, DayofMonth\u003du\u00273\u0027, DayOfWeek\u003du\u00274\u0027, DepTime\u003du\u00271747\u0027, CRSDepTime\u003du\u00271725\u0027, ArrTime\u003du\u00272005\u0027, CRSArrTime\u003du\u00271950\u0027, UniqueCarrier\u003du\u0027UA\u0027, FlightNum\u003du\u00271543\u0027, TailNum\u003du\u0027N447UA\u0027, ActualElapsedTime\u003du\u0027258\u0027, CRSElapsedTime\u003du\u0027265\u0027, AirTime\u003du\u0027240\u0027, ArrDelay\u003du\u002715\u0027, DepDelay\u003du\u002722\u0027, Origin\u003du\u0027MIA\u0027, Dest\u003du\u0027DEN\u0027, Distance\u003du\u00271709\u0027, TaxiIn\u003du\u00276\u0027, TaxiOut\u003du\u002712\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u00270\u0027, WeatherDelay\u003du\u00270\u0027, NASDelay\u003du\u00270\u0027, SecurityDelay\u003du\u00270\u0027, LateAircraftDelay\u003du\u002715\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u00272\u0027, DayofMonth\u003du\u002729\u0027, DayOfWeek\u003du\u00275\u0027, DepTime\u003du\u00271151\u0027, CRSDepTime\u003du\u00271148\u0027, ArrTime\u003du\u00271231\u0027, CRSArrTime\u003du\u00271235\u0027, UniqueCarrier\u003du\u0027F9\u0027, FlightNum\u003du\u0027617\u0027, TailNum\u003du\u0027N939FR\u0027, ActualElapsedTime\u003du\u0027160\u0027, CRSElapsedTime\u003du\u0027167\u0027, AirTime\u003du\u0027143\u0027, ArrDelay\u003du\u0027-4\u0027, DepDelay\u003du\u00273\u0027, Origin\u003du\u0027IND\u0027, Dest\u003du\u0027DEN\u0027, Distance\u003du\u0027977\u0027, TaxiIn\u003du\u00279\u0027, TaxiOut\u003du\u00278\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u0027NA\u0027, WeatherDelay\u003du\u0027NA\u0027, NASDelay\u003du\u0027NA\u0027, SecurityDelay\u003du\u0027NA\u0027, LateAircraftDelay\u003du\u0027NA\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u00275\u0027, DayofMonth\u003du\u002727\u0027, DayOfWeek\u003du\u00272\u0027, DepTime\u003du\u0027850\u0027, CRSDepTime\u003du\u0027850\u0027, ArrTime\u003du\u00271046\u0027, CRSArrTime\u003du\u00271100\u0027, UniqueCarrier\u003du\u0027WN\u0027, FlightNum\u003du\u0027731\u0027, TailNum\u003du\u0027N701GS\u0027, ActualElapsedTime\u003du\u0027116\u0027, CRSElapsedTime\u003du\u0027130\u0027, AirTime\u003du\u002797\u0027, ArrDelay\u003du\u0027-14\u0027, DepDelay\u003du\u00270\u0027, Origin\u003du\u0027SEA\u0027, Dest\u003du\u0027OAK\u0027, Distance\u003du\u0027671\u0027, TaxiIn\u003du\u00274\u0027, TaxiOut\u003du\u002715\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u0027NA\u0027, WeatherDelay\u003du\u0027NA\u0027, NASDelay\u003du\u0027NA\u0027, SecurityDelay\u003du\u0027NA\u0027, LateAircraftDelay\u003du\u0027NA\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u00275\u0027, DayofMonth\u003du\u00279\u0027, DayOfWeek\u003du\u00275\u0027, DepTime\u003du\u0027545\u0027, CRSDepTime\u003du\u0027545\u0027, ArrTime\u003du\u0027628\u0027, CRSArrTime\u003du\u0027632\u0027, UniqueCarrier\u003du\u0027OO\u0027, FlightNum\u003du\u00275577\u0027, TailNum\u003du\u0027N582SW\u0027, ActualElapsedTime\u003du\u002743\u0027, CRSElapsedTime\u003du\u002747\u0027, AirTime\u003du\u002726\u0027, ArrDelay\u003du\u0027-4\u0027, DepDelay\u003du\u00270\u0027, Origin\u003du\u0027SMF\u0027, Dest\u003du\u0027SFO\u0027, Distance\u003du\u002786\u0027, TaxiIn\u003du\u00279\u0027, TaxiOut\u003du\u00278\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u0027NA\u0027, WeatherDelay\u003du\u0027NA\u0027, NASDelay\u003du\u0027NA\u0027, SecurityDelay\u003du\u0027NA\u0027, LateAircraftDelay\u003du\u0027NA\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u00275\u0027, DayofMonth\u003du\u002712\u0027, DayOfWeek\u003du\u00271\u0027, DepTime\u003du\u0027823\u0027, CRSDepTime\u003du\u0027825\u0027, ArrTime\u003du\u0027926\u0027, CRSArrTime\u003du\u0027929\u0027, UniqueCarrier\u003du\u0027DL\u0027, FlightNum\u003du\u00271033\u0027, TailNum\u003du\u0027N909DA\u0027, ActualElapsedTime\u003du\u0027123\u0027, CRSElapsedTime\u003du\u0027124\u0027, AirTime\u003du\u0027105\u0027, ArrDelay\u003du\u0027-3\u0027, DepDelay\u003du\u0027-2\u0027, Origin\u003du\u0027SLC\u0027, Dest\u003du\u0027SEA\u0027, Distance\u003du\u0027689\u0027, TaxiIn\u003du\u00275\u0027, TaxiOut\u003du\u002713\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u0027NA\u0027, WeatherDelay\u003du\u0027NA\u0027, NASDelay\u003du\u0027NA\u0027, SecurityDelay\u003du\u0027NA\u0027, LateAircraftDelay\u003du\u0027NA\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u00276\u0027, DayofMonth\u003du\u002715\u0027, DayOfWeek\u003du\u00277\u0027, DepTime\u003du\u00271941\u0027, CRSDepTime\u003du\u00271945\u0027, ArrTime\u003du\u00272010\u0027, CRSArrTime\u003du\u00271940\u0027, UniqueCarrier\u003du\u0027WN\u0027, FlightNum\u003du\u00273759\u0027, TailNum\u003du\u0027N428WN\u0027, ActualElapsedTime\u003du\u002789\u0027, CRSElapsedTime\u003du\u002755\u0027, AirTime\u003du\u002741\u0027, ArrDelay\u003du\u002730\u0027, DepDelay\u003du\u0027-4\u0027, Origin\u003du\u0027IND\u0027, Dest\u003du\u0027MDW\u0027, Distance\u003du\u0027162\u0027, TaxiIn\u003du\u00275\u0027, TaxiOut\u003du\u002743\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u00270\u0027, WeatherDelay\u003du\u00270\u0027, NASDelay\u003du\u002730\u0027, SecurityDelay\u003du\u00270\u0027, LateAircraftDelay\u003du\u00270\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u00277\u0027, DayofMonth\u003du\u002714\u0027, DayOfWeek\u003du\u00271\u0027, DepTime\u003du\u00271533\u0027, CRSDepTime\u003du\u00271515\u0027, ArrTime\u003du\u00271714\u0027, CRSArrTime\u003du\u00271700\u0027, UniqueCarrier\u003du\u0027MQ\u0027, FlightNum\u003du\u00273820\u0027, TailNum\u003du\u0027N855AE\u0027, ActualElapsedTime\u003du\u0027101\u0027, CRSElapsedTime\u003du\u0027105\u0027, AirTime\u003du\u002783\u0027, ArrDelay\u003du\u002714\u0027, DepDelay\u003du\u002718\u0027, Origin\u003du\u0027MOB\u0027, Dest\u003du\u0027DFW\u0027, Distance\u003du\u0027540\u0027, TaxiIn\u003du\u00279\u0027, TaxiOut\u003du\u00279\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u0027NA\u0027, WeatherDelay\u003du\u0027NA\u0027, NASDelay\u003du\u0027NA\u0027, SecurityDelay\u003du\u0027NA\u0027, LateAircraftDelay\u003du\u0027NA\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u00279\u0027, DayofMonth\u003du\u002718\u0027, DayOfWeek\u003du\u00274\u0027, DepTime\u003du\u00271720\u0027, CRSDepTime\u003du\u00271720\u0027, ArrTime\u003du\u00271901\u0027, CRSArrTime\u003du\u00271900\u0027, UniqueCarrier\u003du\u0027OH\u0027, FlightNum\u003du\u00276728\u0027, TailNum\u003du\u0027N720SW\u0027, ActualElapsedTime\u003du\u0027101\u0027, CRSElapsedTime\u003du\u0027100\u0027, AirTime\u003du\u002767\u0027, ArrDelay\u003du\u00271\u0027, DepDelay\u003du\u00270\u0027, Origin\u003du\u0027RDU\u0027, Dest\u003du\u0027LGA\u0027, Distance\u003du\u0027431\u0027, TaxiIn\u003du\u00279\u0027, TaxiOut\u003du\u002725\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u0027NA\u0027, WeatherDelay\u003du\u0027NA\u0027, NASDelay\u003du\u0027NA\u0027, SecurityDelay\u003du\u0027NA\u0027, LateAircraftDelay\u003du\u0027NA\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u002710\u0027, DayofMonth\u003du\u002727\u0027, DayOfWeek\u003du\u00271\u0027, DepTime\u003du\u0027927\u0027, CRSDepTime\u003du\u0027933\u0027, ArrTime\u003du\u00271111\u0027, CRSArrTime\u003du\u00271100\u0027, UniqueCarrier\u003du\u0027OO\u0027, FlightNum\u003du\u00276390\u0027, TailNum\u003du\u0027N743SK\u0027, ActualElapsedTime\u003du\u0027104\u0027, CRSElapsedTime\u003du\u002787\u0027, AirTime\u003du\u002769\u0027, ArrDelay\u003du\u002711\u0027, DepDelay\u003du\u0027-6\u0027, Origin\u003du\u0027SFO\u0027, Dest\u003du\u0027SNA\u0027, Distance\u003du\u0027372\u0027, TaxiIn\u003du\u002714\u0027, TaxiOut\u003du\u002721\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u0027NA\u0027, WeatherDelay\u003du\u0027NA\u0027, NASDelay\u003du\u0027NA\u0027, SecurityDelay\u003du\u0027NA\u0027, LateAircraftDelay\u003du\u0027NA\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u002710\u0027, DayofMonth\u003du\u00271\u0027, DayOfWeek\u003du\u00273\u0027, DepTime\u003du\u0027613\u0027, CRSDepTime\u003du\u0027615\u0027, ArrTime\u003du\u0027809\u0027, CRSArrTime\u003du\u0027811\u0027, UniqueCarrier\u003du\u0027US\u0027, FlightNum\u003du\u0027274\u0027, TailNum\u003du\u0027N168AW\u0027, ActualElapsedTime\u003du\u0027116\u0027, CRSElapsedTime\u003du\u0027116\u0027, AirTime\u003du\u002789\u0027, ArrDelay\u003du\u0027-2\u0027, DepDelay\u003du\u0027-2\u0027, Origin\u003du\u0027SJC\u0027, Dest\u003du\u0027PHX\u0027, Distance\u003du\u0027621\u0027, TaxiIn\u003du\u00274\u0027, TaxiOut\u003du\u002723\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u0027NA\u0027, WeatherDelay\u003du\u0027NA\u0027, NASDelay\u003du\u0027NA\u0027, SecurityDelay\u003du\u0027NA\u0027, LateAircraftDelay\u003du\u0027NA\u0027)\n\nRow(Year\u003du\u00272008\u0027, Month\u003du\u002712\u0027, DayofMonth\u003du\u002717\u0027, DayOfWeek\u003du\u00273\u0027, DepTime\u003du\u00271456\u0027, CRSDepTime\u003du\u00271430\u0027, ArrTime\u003du\u00271548\u0027, CRSArrTime\u003du\u00271515\u0027, UniqueCarrier\u003du\u0027MQ\u0027, FlightNum\u003du\u00273020\u0027, TailNum\u003du\u0027N800MQ\u0027, ActualElapsedTime\u003du\u002752\u0027, CRSElapsedTime\u003du\u002745\u0027, AirTime\u003du\u002730\u0027, ArrDelay\u003du\u002733\u0027, DepDelay\u003du\u002726\u0027, Origin\u003du\u0027SAN\u0027, Dest\u003du\u0027LAX\u0027, Distance\u003du\u0027109\u0027, TaxiIn\u003du\u00276\u0027, TaxiOut\u003du\u002716\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u00272\u0027, WeatherDelay\u003du\u00270\u0027, NASDelay\u003du\u00277\u0027, SecurityDelay\u003du\u00270\u0027, LateAircraftDelay\u003du\u002724\u0027)\n\n"
+      },
+      "dateCreated": "Oct 1, 2015 4:09:27 AM",
+      "dateStarted": "Oct 1, 2015 6:16:17 PM",
+      "dateFinished": "Oct 1, 2015 6:16:43 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n# Register the dataframe as a temporary table to perform SQL queries\n\nairdf.registerTempTable(\"airline\")",
+      "dateUpdated": "Oct 1, 2015 1:39:27 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443706148878_280706661",
+      "id": "20151001-132908_993166159",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Oct 1, 2015 1:29:08 PM",
+      "dateStarted": "Oct 1, 2015 1:30:12 PM",
+      "dateFinished": "Oct 1, 2015 1:30:12 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eData Exploration - Spark SQL\u003c/h2\u003e",
+      "dateUpdated": "Oct 1, 2015 4:57:02 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443718547425_1198490522",
+      "id": "20151001-165547_651185766",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eData Exploration - Spark SQL\u003c/h2\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 4:55:47 PM",
+      "dateStarted": "Oct 1, 2015 4:57:00 PM",
+      "dateFinished": "Oct 1, 2015 4:57:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect * from airline limit 5",
+      "dateUpdated": "Oct 1, 2015 6:18:12 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "Year",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "Month",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "Year",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "Month",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443706680145_666575871",
+      "id": "20151001-133800_2046577578",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "Year\tMonth\tDayofMonth\tDayOfWeek\tDepTime\tCRSDepTime\tArrTime\tCRSArrTime\tUniqueCarrier\tFlightNum\tTailNum\tActualElapsedTime\tCRSElapsedTime\tAirTime\tArrDelay\tDepDelay\tOrigin\tDest\tDistance\tTaxiIn\tTaxiOut\tCancelled\tCancellationCode\tDiverted\tCarrierDelay\tWeatherDelay\tNASDelay\tSecurityDelay\tLateAircraftDelay\n2007\t5\t24\t4\t940\t945\t1252\t1245\tMQ\t4021\tN641AE\t132\t120\t103\t7\t-5\tORD\tSWF\t714\t5\t24\t0\t\t0\t0\t0\t0\t0\t0\n2007\t5\t25\t5\t955\t945\t1251\t1245\tMQ\t4021\tN644AE\t116\t120\t95\t6\t10\tORD\tSWF\t714\t4\t17\t0\t\t0\t0\t0\t0\t0\t0\n2007\t5\t26\t6\t952\t945\t1247\t1245\tMQ\t4021\tN670AE\t115\t120\t93\t2\t7\tORD\tSWF\t714\t4\t18\t0\t\t0\t0\t0\t0\t0\t0\n2007\t5\t27\t7\t944\t945\t1239\t1245\tMQ\t4021\tN682AE\t115\t120\t93\t-6\t-1\tORD\tSWF\t714\t8\t14\t0\t\t0\t0\t0\t0\t0\t0\n2007\t5\t28\t1\t950\t945\t1242\t1245\tMQ\t4021\tN635AE\t112\t120\t95\t-3\t5\tORD\tSWF\t714\t5\t12\t0\t\t0\t0\t0\t0\t0\t0\n"
+      },
+      "dateCreated": "Oct 1, 2015 1:38:00 PM",
+      "dateStarted": "Oct 1, 2015 6:18:12 PM",
+      "dateFinished": "Oct 1, 2015 6:18:12 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect DayOfWeek,\n       avg(ArrDelay) as Arrival,\n       avg(DepDelay) as Departure,\n       avg(WeatherDelay) as Weather \nfrom airline \nwhere UniqueCarrier\u003d\"${Carrier\u003dAA}\" and FlightNum\u003d\"${FlightNo\u003d661}\" and Year\u003d\u00272008\u0027 \ngroup by DayOfWeek",
+      "dateUpdated": "Oct 1, 2015 6:20:46 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "DayOfWeek",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "Arrival",
+              "index": 1.0,
+              "aggr": "sum"
+            },
+            {
+              "name": "Departure",
+              "index": 2.0,
+              "aggr": "sum"
+            },
+            {
+              "name": "Weather",
+              "index": 3.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "DayOfWeek",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "Arrival",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {
+          "Carrier": "AA",
+          "FlightNo": "661"
+        },
+        "forms": {
+          "Carrier": {
+            "name": "Carrier",
+            "defaultValue": "AA",
+            "hidden": false
+          },
+          "FlightNo": {
+            "name": "FlightNo",
+            "defaultValue": "661",
+            "hidden": false
+          }
+        }
+      },
+      "jobName": "paragraph_1443706217150_-1504654118",
+      "id": "20151001-133017_1177162557",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "DayOfWeek\tArrival\tDeparture\tWeather\n1\t2.436619718309859\t5.5\t4.357142857142857\n2\t11.901408450704226\t11.458333333333334\t0.9473684210526315\n3\t-0.6891891891891891\t3.2666666666666666\t0.0\n4\t6.753623188405797\t7.101449275362318\t0.9\n5\t9.256756756756756\t8.77027027027027\t0.0\n6\t2.169230769230769\t4.292307692307692\t6.846153846153846\n7\t-0.6\t3.0533333333333332\t0.0\n"
+      },
+      "dateCreated": "Oct 1, 2015 1:30:17 PM",
+      "dateStarted": "Oct 1, 2015 6:20:46 PM",
+      "dateFinished": "Oct 1, 2015 6:20:49 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect UniqueCarrier,\n       sum(ArrDelay)/100000 as Arrival,\n       sum(DepDelay)/100000 as Departure,\n       sum(WeatherDelay)/100000 as Weather \nfrom airline \ngroup by UniqueCarrier \norder by Arrival desc",
+      "dateUpdated": "Oct 1, 2015 6:21:44 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 280.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "UniqueCarrier",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "Arrival",
+              "index": 1.0,
+              "aggr": "sum"
+            },
+            {
+              "name": "Departure",
+              "index": 2.0,
+              "aggr": "sum"
+            },
+            {
+              "name": "Weather",
+              "index": 3.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "UniqueCarrier",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "Arrival",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443710665865_535242914",
+      "id": "20151001-144425_1967281697",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "UniqueCarrier\tArrival\tDeparture\tWeather\nDL\t1228.53432\t1236.98145\t9.53449\nUA\t1106.85605\t1257.73954\t10.1214\nAA\t995.40007\t1155.59187\t34.63299\nUS\t885.58778\t1020.25396\t8.02291\nWN\t871.99291\t1436.0986\t21.61602\nCO\t558.31254\t618.19911\t10.50562\nNW\t551.55194\t605.51387\t21.18639\nMQ\t324.32586\t350.27803\t21.07265\nHP\t270.49187\t290.36032\t0.71713\nTW\t252.18176\t282.48677\tnull\nAS\t235.9988\t234.05845\t1.91647\nXE\t207.15932\t194.14434\t14.65894\nOO\t177.51788\t217.65797\t17.68608\nEV\t176.71819\t222.28654\t37.66058\nFL\t118.4659\t128.71102\t1.67493\nOH\t105.80107\t131.93676\t41.71659\nYV\t94.09631\t106.46425\t5.15006\nPI\t90.22518\t82.7014\tnull\nB6\t77.24044\t90.33564\t3.30109\nEA\t62.79305\t77.29299\tnull\nDH\t45.52841\t64.48841\t3.51463\n9E\t30.8165\t40.12595\t3.49966\nF9\t19.06321\t20.43588\t1.08953\nPA (1)\t16.92364\t17.29696\tnull\nTZ\t12.62537\t11.448\t0.23136\nPS\t7.62188\t7.36265\tnull\nML (1)\t3.2815\t4.31592\tnull\nAQ\t1.75282\t2.42367\t0.02297\nHA\t-2.11526\t-1.40986\t0.12365\n"
+      },
+      "dateCreated": "Oct 1, 2015 2:44:25 PM",
+      "dateStarted": "Oct 1, 2015 2:52:05 PM",
+      "dateFinished": "Oct 1, 2015 2:53:02 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect Year, \n       avg(ArrDelay) as Arrival, avg(DepDelay) as Departure, avg(WeatherDelay) as Weather \nfrom airline \ngroup by Year",
+      "dateUpdated": "Oct 1, 2015 3:02:39 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "stackedAreaChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "Year",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "Arrival",
+              "index": 1.0,
+              "aggr": "sum"
+            },
+            {
+              "name": "Departure",
+              "index": 2.0,
+              "aggr": "sum"
+            },
+            {
+              "name": "Weather",
+              "index": 3.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "Year",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "Arrival",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443710883176_-1549587137",
+      "id": "20151001-144803_2039807076",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "Year\tArrival\tDeparture\tWeather\n1987\t9.446699049774669\t8.063637791850889\tnull\n1988\t6.547350003318737\t6.706767731645578\tnull\n1989\t8.406395667699744\t8.202822005482144\tnull\n1990\t6.809947215568879\t6.909441048896843\tnull\n1991\t4.736444635205101\t5.753782318979938\tnull\n1992\t4.879557758977489\t5.688272090624908\tnull\n1993\t5.344062373570667\t6.122580955467707\tnull\n1994\t5.662489742613603\t6.65992152242736\tnull\n1995\t7.024064131208232\t8.2787656646032\tnull\n1996\t9.673284221413672\t9.99107466774335\tnull\n1997\t7.490578364877097\t8.2355660810526\tnull\n1998\t7.586967680246472\t9.024560838378294\tnull\n1999\t8.246601037533829\t9.33710084519183\tnull\n2000\t10.472886100257549\t11.280681830795313\tnull\n2001\t5.528248731190619\t8.154837497311117\tnull\n2002\t3.191243511752914\t5.532276225189274\tnull\n2003\t3.596694098473122\t5.24823052695046\t0.5207704915197293\n2004\t6.508066211497327\t7.8923142755001665\t0.7065884725925656\n2005\t7.18134339734454\t8.67431288110833\t0.6601395737834769\n2006\t8.6828402630457\t10.09364218286413\t0.6796269967664167\n2007\t10.19218057072105\t11.399141744487839\t0.7700903569801757\n2008\t8.16845238729114\t9.972570088930182\t3.039031044738922\n"
+      },
+      "dateCreated": "Oct 1, 2015 2:48:03 PM",
+      "dateStarted": "Oct 1, 2015 3:00:07 PM",
+      "dateFinished": "Oct 1, 2015 3:01:54 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eETL\u003c/h2\u003e",
+      "dateUpdated": "Oct 1, 2015 4:59:04 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443718661646_1983179063",
+      "id": "20151001-165741_526698215",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eETL\u003c/h2\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 4:57:41 PM",
+      "dateStarted": "Oct 1, 2015 4:58:49 PM",
+      "dateFinished": "Oct 1, 2015 4:58:49 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n# Filter out just a single airport for a particular ea\nairport \u003d airdf.filter(airdf.Year \u003d\u003d \u00272008\u0027) \\\n               .filter(airdf.Origin \u003d\u003d \u0027DFW\u0027) \\\n               .filter(airdf.DepDelay \u003e\u003d 15) \\\n               .filter(airdf.CRSDepTime !\u003d \u0027NA\u0027)\n\nprint airport.count()\nairport.registerTempTable(\u0027airport\u0027)\n",
+      "dateUpdated": "Oct 1, 2015 3:40:27 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443711013532_-1749317265",
+      "id": "20151001-145013_1142195868",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "66184\n"
+      },
+      "dateCreated": "Oct 1, 2015 2:50:13 PM",
+      "dateStarted": "Oct 1, 2015 3:40:27 PM",
+      "dateFinished": "Oct 1, 2015 3:40:28 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect Month, count(DepDelay) as Delay from airport group by Month",
+      "dateUpdated": "Oct 1, 2015 5:22:06 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "Month",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "Delay",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "yAxis": {
+              "name": "Delay",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443712035713_-1863135065",
+      "id": "20151001-150715_1496120162",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "Month\tDelay\n1\t5748\n2\t5954\n3\t6698\n4\t5476\n5\t6597\n6\t7639\n7\t6336\n8\t6552\n9\t3197\n10\t3189\n11\t2994\n12\t5804\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:07:15 PM",
+      "dateStarted": "Oct 1, 2015 5:20:32 PM",
+      "dateFinished": "Oct 1, 2015 5:20:34 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n\nfrom pyspark.sql.functions import udf\nfrom pyspark.sql.types import IntegerType\n\n# Create a udf for extracting the hr from the CSRDepTime\nhour \u003d udf(lambda x: int(x[:-2]), IntegerType())\ndelay \u003d udf(lambda x: int(x), IntegerType())\n\n# Lets look at what hr the delays tend to show up\ndelay_hr \u003d airport.withColumn(\u0027delay\u0027, delay(airport.DepDelay)) \\\n                  .withColumn(\u0027hour\u0027, hour(airport.CRSDepTime))\n\nprint delay_hr.take(2)\ndelay_hr.registerTempTable(\"delay_hr\")\n",
+      "dateUpdated": "Oct 1, 2015 5:21:15 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443712107602_1870022216",
+      "id": "20151001-150827_1960907118",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "[Row(Year\u003du\u00272008\u0027, Month\u003du\u00271\u0027, DayofMonth\u003du\u002728\u0027, DayOfWeek\u003du\u00271\u0027, DepTime\u003du\u0027839\u0027, CRSDepTime\u003du\u0027820\u0027, ArrTime\u003du\u0027949\u0027, CRSArrTime\u003du\u0027927\u0027, UniqueCarrier\u003du\u0027XE\u0027, FlightNum\u003du\u00272696\u0027, TailNum\u003du\u0027N12530\u0027, ActualElapsedTime\u003du\u002770\u0027, CRSElapsedTime\u003du\u002767\u0027, AirTime\u003du\u002751\u0027, ArrDelay\u003du\u002722\u0027, DepDelay\u003du\u002719\u0027, Origin\u003du\u0027DFW\u0027, Dest\u003du\u0027IAH\u0027, Distance\u003du\u0027224\u0027, TaxiIn\u003du\u00275\u0027, TaxiOut\u003du\u002714\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u00272\u0027, WeatherDelay\u003du\u00270\u0027, NASDelay\u003du\u00273\u0027, SecurityDelay\u003du\u00270\u0027, LateAircraftDelay\u003du\u002717\u0027, delay\u003d19, hour\u003d8), Row(Year\u003du\u00272008\u0027, Month\u003du\u00271\u0027, DayofMonth\u003du\u00271\u0027, DayOfWeek\u003du\u00272\u0027, DepTime\u003du\u00271946\u0027, CRSDepTime\u003du\u00271930\u0027, ArrTime\u003du\u00272351\u0027, CRSArrTime\u003du\u00272258\u0027, UniqueCarrier\u003du\u0027XE\u0027, FlightNum\u003du\u00272042\u0027, TailNum\u003du\u0027N12564\u0027, ActualElapsedTime\u003du\u0027185\u0027, CRSElapsedTime\u003du\u0027148\u0027, AirTime\u003du\u0027147\u0027, ArrDelay\u003du\u002753\u0027, DepDelay\u003du\u002716\u0027, Origin\u003du\u0027DFW\u0027, Dest\u003du\u0027CLE\u0027, Distance\u003du\u00271021\u0027, TaxiIn\u003du\u002726\u0027, TaxiOut\u003du\u002712\u0027, Cancelled\u003du\u00270\u0027, CancellationCode\u003du\u0027\u0027, Diverted\u003du\u00270\u0027, CarrierDelay\u003du\u00270\u0027, WeatherDelay\u003du\u00270\u0027, NASDelay\u003du\u002737\u0027, SecurityDelay\u003du\u00270\u0027, LateAircraftDelay\u003du\u002716\u0027, delay\u003d16, hour\u003d19)]\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:08:27 PM",
+      "dateStarted": "Oct 1, 2015 5:21:15 PM",
+      "dateFinished": "Oct 1, 2015 5:21:37 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect hour, sum(delay) as Delay from delay_hr group by hour",
+      "dateUpdated": "Oct 1, 2015 6:27:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "stackedAreaChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "hour",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "Delay",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "hour",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "Delay",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443712202989_-1062610522",
+      "id": "20151001-151002_617291373",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "hour\tDelay\n5\t3601\n6\t28289\n7\t87948\n8\t111405\n9\t169755\n10\t185627\n11\t181690\n12\t243077\n13\t256686\n14\t249704\n15\t235399\n16\t271104\n17\t293785\n18\t289350\n19\t307147\n20\t229298\n21\t171353\n22\t56608\n23\t7957\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:10:02 PM",
+      "dateStarted": "Oct 1, 2015 3:47:22 PM",
+      "dateFinished": "Oct 1, 2015 3:48:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect UniqueCarrier, count(DepDelay) as TotalDelays from delay_hr group by UniqueCarrier order by TotalDelays",
+      "dateUpdated": "Oct 1, 2015 4:06:14 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "UniqueCarrier",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "TotalDelays",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "UniqueCarrier",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "TotalDelays",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443712227622_1479238282",
+      "id": "20151001-151027_1091446128",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "UniqueCarrier\tTotalDelays\nEV\t2\nYV\t11\n9E\t122\nAS\t156\nNW\t157\nOH\t234\nF9\t291\nXE\t294\nOO\t427\nFL\t549\nDL\t638\nUS\t752\nUA\t853\nCO\t863\nMQ\t20494\nAA\t40341\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:10:27 PM",
+      "dateStarted": "Oct 1, 2015 4:05:29 PM",
+      "dateFinished": "Oct 1, 2015 4:05:58 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eMachine Learning - Spark MlLib\u003c/h2\u003e",
+      "dateUpdated": "Oct 1, 2015 5:00:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443718794794_1794803700",
+      "id": "20151001-165954_857909404",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eMachine Learning - Spark MlLib\u003c/h2\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 4:59:54 PM",
+      "dateStarted": "Oct 1, 2015 5:00:07 PM",
+      "dateFinished": "Oct 1, 2015 5:00:07 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nfrom pyspark.mllib.classification import LogisticRegressionWithSGD\nfrom pyspark.mllib.regression import LabeledPoint\nfrom pyspark.mllib.linalg import Vectors\nfrom pyspark.mllib.feature import StandardScaler\n\n# Lets do the machine learning part\nbasedata \u003d sqlContext.read.parquet(\"tachyon://master-1.local:19998/airline.parquet\")\n\n# Training Data - 2007\ndf2007 \u003d basedata.filter(basedata.Year \u003d\u003d \u00272007\u0027) \\\n                 .filter(basedata.Origin \u003d\u003d \u0027ORD\u0027) \\\n                 .filter(basedata.Cancelled \u003d\u003d 0) \\\n                 .filter(basedata.DepDelay !\u003d \u0027NA\u0027) \\\n                 .filter(basedata.CRSDepTime !\u003d \u0027NA\u0027)\ntrainData \u003d df2007.map(lambda x: LabeledPoint(1.0 if int(x.DepDelay) \u003e\u003d 15 else 0.0,\n                                              Vectors.dense([x.Month,\n                                                             x.DayofMonth,\n                                                             x.DayOfWeek,\n                                                             int(x.CRSDepTime[:-2])])))\ntrainData.cache\n\n\n# Test Data - 2008\ndf2008 \u003d basedata.filter(basedata.Year \u003d\u003d \u00272008\u0027) \\\n                 .filter(basedata.Origin \u003d\u003d \u0027ORD\u0027) \\\n                 .filter(basedata.Cancelled \u003d\u003d 0) \\\n                 .filter(basedata.DepDelay !\u003d \u0027NA\u0027) \\\n                 .filter(basedata.CRSDepTime !\u003d \u0027NA\u0027)\ntestData \u003d df2008.map(lambda x: LabeledPoint(1.0 if int(x.DepDelay) \u003e\u003d 15 else 0.0,\n                                             Vectors.dense([x.Month,\n                                                            x.DayofMonth,\n                                                            x.DayOfWeek,\n                                                            int(x.CRSDepTime[:-2])])))\ntestData.cache\n\n\n\n# Build the Logistic Regression Model\nmodel \u003d LogisticRegressionWithSGD.train(trainData, iterations\u003d100)\n\n# Validate the model with test data\npredictions \u003d testData.map(lambda point: (point.label, model.predict(point.features)))\n\ndef eval_metrics(predictions):\n    tp \u003d float(predictions.filter(lambda x: x[0] \u003d\u003d 1 and x[1] \u003d\u003d 1).count())\n    tn \u003d float(predictions.filter(lambda x: x[0] \u003d\u003d 0 and x[1] \u003d\u003d 0).count())\n    fp \u003d float(predictions.filter(lambda x: x[0] \u003d\u003d 1 and x[1] \u003d\u003d 0).count())\n    fn \u003d float(predictions.filter(lambda x: x[0] \u003d\u003d 0 and x[1] \u003d\u003d 1).count())\n\n    print \"TP: {0} - TN: {1} - FP: {2} - FN: {3}\".format(tp, tn, fp, fn)\n    precision \u003d recall \u003d f_measure \u003d accuracy \u003d 0\n    if (tp + fp) !\u003d 0:\n        precision \u003d tp / (tp + fp)\n    if (tp + fn) !\u003d 0:\n        recall \u003d tp / (tp + fn)\n    if (precision + recall) !\u003d 0:\n        f_measure \u003d 2 * precision * recall / (precision + recall)\n    if (tp + tn + fp + fn) !\u003d 0:\n        accuracy \u003d (tp + tn) / (tp + tn + fp + fn)\n    print \"Precision: {0}, Recall: {1}, F1: {2}, Accuracy: {3}\".format(precision, recall, f_measure, accuracy)\n    \neval_metrics(predictions)",
+      "dateUpdated": "Oct 1, 2015 4:52:27 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443713561349_-929307693",
+      "id": "20151001-153241_820187983",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "TP: 9935.0 - TN: 229555.0 - FP: 85501.0 - FN: 10339.0\nPrecision: 0.104101177753, Recall: 0.490036499951, F1: 0.171722409472, Accuracy: 0.71419198998\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:32:41 PM",
+      "dateStarted": "Oct 1, 2015 4:52:27 PM",
+      "dateFinished": "Oct 1, 2015 4:53:57 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n# Predict\nprint model.predict([5, 3, 2, 16])",
+      "dateUpdated": "Oct 1, 2015 6:33:46 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443713708837_234789237",
+      "id": "20151001-153508_618403527",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "1\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:35:08 PM",
+      "dateStarted": "Oct 1, 2015 6:33:46 PM",
+      "dateFinished": "Oct 1, 2015 6:33:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eWhat next?\u003c/h2\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eWeather Data -\u003cspan style\u003d\"color:#9E0000\"\u003e- Improve our model\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eRealtime Data -\u003cspan style\u003d\"color:#9E0000\"\u003e- Spark Streaming\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n",
+      "dateUpdated": "Oct 1, 2015 5:24:26 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443718830253_-1119052963",
+      "id": "20151001-170030_1013892632",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eWhat next?\u003c/h2\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eWeather Data -\u003cspan style\u003d\"color:#9E0000\"\u003e- Improve our model\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eRealtime Data -\u003cspan style\u003d\"color:#9E0000\"\u003e- Spark Streaming\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Oct 1, 2015 5:00:30 PM",
+      "dateStarted": "Oct 1, 2015 5:02:03 PM",
+      "dateFinished": "Oct 1, 2015 5:02:03 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eTachyon\u003c/h2\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eCaching intermediate results\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eMultiple underfs -\u003cspan style\u003d\"color:#9E0000\"\u003e HDFS, Swift, S3\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eUnify disparate backend storage systems\u003c/div\u003e\u003c/h3\u003e",
+      "dateUpdated": "Oct 1, 2015 5:04:52 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443718939610_-1576149980",
+      "id": "20151001-170219_1095038915",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eTachyon\u003c/h2\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eCaching intermediate results\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eMultiple underfs -\u003cspan style\u003d\"color:#9E0000\"\u003e HDFS, Swift, S3\u003c/span\u003e\u003c/div\u003e\u003c/h3\u003e\n\u003ch3\u003e\u003cdiv style\u003d\"color:#646464\"\u003eUnify disparate backend storage systems\u003c/div\u003e\u003c/h3\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 5:02:19 PM",
+      "dateStarted": "Oct 1, 2015 5:04:21 PM",
+      "dateFinished": "Oct 1, 2015 5:04:22 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2 style\u003d\"color:#C40022;\"\u003eCollaboration\u003c/h2\u003e",
+      "dateUpdated": "Oct 1, 2015 5:05:22 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443719083156_-92776049",
+      "id": "20151001-170443_1244070619",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2 style\u003d\"color:#C40022;\"\u003eCollaboration\u003c/h2\u003e"
+      },
+      "dateCreated": "Oct 1, 2015 5:04:43 PM",
+      "dateStarted": "Oct 1, 2015 5:05:19 PM",
+      "dateFinished": "Oct 1, 2015 5:05:19 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nselect UniqueCarrier, avg(ArrDelay) as Delay from airport group by UniqueCarrier",
+      "dateUpdated": "Oct 1, 2015 6:38:01 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "UniqueCarrier",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "Delay",
+              "index": 1.0,
+              "aggr": "avg"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "UniqueCarrier",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443719128533_-141361679",
+      "id": "20151001-170528_451117713",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "UniqueCarrier\tDelay\nAA\t52.767737600477815\nAS\t63.22435897435897\nUA\t66.01173708920187\nNW\t61.82692307692308\nUS\t60.648936170212764\nOH\t55.6025641025641\nOO\t57.182033096926716\nCO\t79.89135514018692\nDL\t64.07413249211356\nXE\t68.87671232876713\nEV\t80.0\nF9\t44.34707903780069\n9E\t71.65833333333333\nYV\t65.0909090909091\nFL\t57.107861060329064\nMQ\t43.91693603683025\n"
+      },
+      "dateCreated": "Oct 1, 2015 5:05:28 PM",
+      "dateStarted": "Oct 1, 2015 6:38:01 PM",
+      "dateFinished": "Oct 1, 2015 6:38:04 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003cimg src\u003d\"http://fdb103551f8e4cf72554-30956f896d517e3400d6de2a7427c277.r79.cf5.rackcdn.com/img/questions.png\"\u003e\n\u003cp style\u003d\"position: absolute; top: 2em; left: 2em; width: 120px; padding: 4px; color: #FFF; font-weight: bold; font-size: 100px;\"\u003e\nQuestions\n@rnirmal\n\u003c/p\u003e\n",
+      "dateUpdated": "Oct 1, 2015 5:17:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443669598426_-516476320",
+      "id": "20151001-031958_38357559",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003cimg src\u003d\"http://fdb103551f8e4cf72554-30956f896d517e3400d6de2a7427c277.r79.cf5.rackcdn.com/img/questions.png\"\u003e\n\u003cp style\u003d\"position: absolute; top: 2em; left: 2em; width: 120px; padding: 4px; color: #FFF; font-weight: bold; font-size: 100px;\"\u003e\nQuestions\n@rnirmal\n\u003c/p\u003e\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:19:58 AM",
+      "dateStarted": "Oct 1, 2015 5:16:06 PM",
+      "dateFinished": "Oct 1, 2015 5:16:24 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%angular\n\n\u003ch2\u003eVisit http://bit.ly/cbdtrial or http://baremetalbigdata.com to get a free trial!\u003c/h2\u003e\n",
+      "dateUpdated": "Oct 1, 2015 5:58:31 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443671551984_-974706803",
+      "id": "20151001-035231_328464892",
+      "result": {
+        "code": "SUCCESS",
+        "type": "ANGULAR",
+        "msg": "\n\u003ch2\u003eVisit http://bit.ly/cbdtrial or http://baremetalbigdata.com to get a free trial!\u003c/h2\u003e\n"
+      },
+      "dateCreated": "Oct 1, 2015 3:52:31 AM",
+      "dateStarted": "Oct 1, 2015 5:58:16 PM",
+      "dateFinished": "Oct 1, 2015 5:58:16 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1443722296247_1866165539",
+      "id": "20151001-175816_1884435221",
+      "dateCreated": "Oct 1, 2015 5:58:16 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Airline Data",
+  "id": "2AYKMP5QA",
+  "angularObjects": {
+    "2B1Y4R5QK": [],
+    "2B2VE3UC1": [],
+    "2AZQ8S864": [],
+    "2B2BCQTT3": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}
