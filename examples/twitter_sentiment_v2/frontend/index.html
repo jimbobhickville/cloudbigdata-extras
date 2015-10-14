@@ -10,7 +10,6 @@
 
       function updateAll(tweets) {
         writeTweets(tweets);
-        mapReboot(tweets);
         buildChartData(tweets);
       }
 
@@ -36,36 +35,12 @@
     <div class="main wrapper">
       <ul class="nav nav-tabs" role="tablist" style="">
         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" id="graphsTab"><span class="glyphicon glyphicon-signal"></span> <span class="tab-font">Graph</span></a></li>
-        <li role="presentation"><a href="#heat_map" aria-controls="heat_map" role="tab" data-toggle="tab" id="heatMapTab"><span class="glyphicon glyphicon-globe"></span> <span class="tab-font">Heat Map</span></a></li>
         <li role="presentation"><a href="#list" aria-controls="list" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span> <span class="tab-font">Data Stream</span></a></li>
       </ul>
 
       <div class="tab-content" style="background: #fff;">
         <div role="tabpanel" class="tab-pane active" id="home">
           <canvas id="myChart"></canvas>
-        </div>
-
-        <div role="tabpanel" class="tab-pane" id="heat_map">
-          <div class="clearfix heat-button-wrapper">
-            <div class="heat-button-label">
-              Display:
-            </div>
-
-            <div class="radio heat-button-input">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="negative" checked>
-                Negative
-              </label>
-            </div>
-
-            <div class="radio heat-button-input">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="positive">
-                Positve
-              </label>
-            </div>
-          </div>
-          <div id="map"></div>
         </div>
 
         <div role="tabpanel" class="tab-pane" id="list" style="height: 100%;">
@@ -95,9 +70,7 @@
       </div>
     </div>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=visualization&callback=initMap"></script>
     <script src="js/tweets.js"></script>
     <script src="js/chart.js"></script>
-    <script src="js/heatmap.js"></script>
   </body>
 </html>
