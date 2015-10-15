@@ -85,7 +85,7 @@ object Sentiment {
         val hashingTF = new HashingTF()
 
         val labelAndTweet = final_set.map(t => (t.getString(1), t.getString(3)))
-        val documents = labelAndTweet.map{case(sentiment, tweet) => (sentiment.toInt, tokenize(tweet))}
+        val documents = labelAndTweet.map{case(sentiment, tweet) => (sentiment.toFloat.toInt, tokenize(tweet))}
         val featurized = documents.map{case(label, words) => LabeledPoint(label, hashingTF.transform(words))}
         val Array(train, test) = featurized.randomSplit(Array(0.7, 0.3))
         val model = NaiveBayes.train(featurized)
