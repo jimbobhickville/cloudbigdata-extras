@@ -66,9 +66,17 @@ reset_kafka = function () {
     var on_error = function (error) {
         console.log("Got kafka error:", error);
         if (kafka_consumer) {
-            kafka_consumer.close();
+            try {
+                kafka_consumer.close();
+            } catch (e) {
+                console.log("Could not close kafka consumer:", e);
+            }
         }
-        kafka_client.close();
+        try {
+            kafka_client.close();
+        } catch (e) {
+            console.log("Could not close kafka client:", e);
+        }
         reset_kafka();
     };
     kafka_client.on('error', on_error);
