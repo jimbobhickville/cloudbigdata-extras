@@ -1,7 +1,7 @@
 package com.rackspace.spark
 
 import java.io.{File, FilenameFilter}
-import java.util.HashMap
+import java.util.{HashMap,HashSet}
 
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
@@ -27,6 +27,8 @@ import scala.collection.JavaConversions._
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.twitter._
 import org.apache.spark.streaming.StreamingContext._
+
+import twitter4j.Status
 
 object Sentiment {
 
@@ -94,12 +96,10 @@ object Sentiment {
         model
     }
 
-
     def predictSentiment(model: NaiveBayesModel, tokens: Seq[String], hashingTF: HashingTF) : Int = {
         val score = model.predict(hashingTF.transform(tokens))
         return score.toInt
     }
-
 
     def tokenize(content: String): Seq[String] = {
         val tReader = new StringReader(content)
@@ -113,6 +113,37 @@ object Sentiment {
             result += term.toString
         }
         result
+    }
+
+    def tweetToMap(tweet: Status): Map[String, Object] = {
+        val user = tweet.getUser()
+        val locationMap = Option(tweet.getGeoLocation()) match {
+            case Some(location) => {
+                Map[String, Object](
+                    "lat" -> location.getLatitude().toString(),
+                    "lon" -> location.getLongitude().toString()
+                )
+            }
+            case None           => {
+                Map[String, Object](
+                    "lat" -> "0",
+                    "lon" -> "0"
+                )
+            }
+        }
+        val userMap = Map[String, Object](
+            "id" -> user.getId().toString(),
+            "name" -> user.getName(),
+            "screen_name" -> user.getScreenName(),
+            "profile_image_url" -> user.getProfileImageURL()
+        )
+        return Map[String, Object](
+            "user" -> new JSONObject(userMap),
+            "location" -> new JSONObject(locationMap),
+            "id" -> tweet.getId().toString(),
+            "created_at" -> tweet.getCreatedAt().toString(),
+            "text" -> tweet.getText()
+        )
     }
 
     def getKafkaProducer(): KafkaProducer[String, Object] = {
@@ -130,9 +161,9 @@ object Sentiment {
         val sc = new SparkContext(conf)
         val sqlContext = new SQLContext(sc)
 
-        val model = prepareNBModel(sqlContext)
+        val broadcastedModel = sc.broadcast(prepareNBModel(sqlContext))
+
         configureTwitterCredentials(apiKey, apiSecret, accessToken, accessTokenSecret)
-        val kafkaProducer = getKafkaProducer()
         val ssc = new StreamingContext(sc, Seconds(twitterRefresh))
         var tokenKeywordMap = new HashMap[String, String];
         args.foreach { keyword =>
@@ -142,52 +173,28 @@ object Sentiment {
                 }
             }
         }
-        val keywordTokens = tokenKeywordMap.keySet()
+        val keywordTokens = new HashSet(tokenKeywordMap.keySet())
         val keywords = args.mkString(",")
         val filters = Array("track=".concat(keywords))
-        val tweets = TwitterUtils.createStream(ssc, None, filters)
-        val hashingTF = new HashingTF()
-        tweets.foreachRDD(tweet_rdd => {
-            tweet_rdd.collect().foreach {
-                tweet => {
-                    val user = tweet.getUser()
-                    val locationMap = Option(tweet.getGeoLocation()) match {
-                        case Some(location) => {
-                            Map[String, Object](
-                                "lat" -> location.getLatitude().toString(),
-                                "lon" -> location.getLongitude().toString()
-                            )
-                        }
-                        case None           => {
-                            Map[String, Object](
-                                "lat" -> "0",
-                                "lon" -> "0"
-                            )
-                        }
-                    }
-                    val userMap = Map[String, Object](
-                        "id" -> user.getId().toString(),
-                        "name" -> user.getName(),
-                        "screen_name" -> user.getScreenName(),
-                        "profile_image_url" -> user.getProfileImageURL()
-                    )
+        val tweetsStream = TwitterUtils.createStream(ssc, None, filters)
+
+        tweetsStream.foreachRDD(tweetsRDD => {
+            tweetsRDD.foreachPartition(tweetsRDDPartition => {
+                val hashingTF = new HashingTF()
+                val kafkaProducer = getKafkaProducer()
+                tweetsRDDPartition.foreach(tweet => {
                     val tweetTokens = tokenize(tweet.getText())
                     val commonTokens = tweetTokens.toSet intersect keywordTokens
-                    val keywords = commonTokens map { tokenKeywordMap.get(_) }
-                    val tweetMap = Map[String, Object](
-                        "user" -> new JSONObject(userMap),
-                        "location" -> new JSONObject(locationMap),
-                        "id" -> tweet.getId().toString(),
-                        "created_at" -> tweet.getCreatedAt().toString(),
-                        "text" -> tweet.getText(),
-                        "score" -> predictSentiment(model, tweetTokens, hashingTF).toString(),
-                        "keywords" -> new JSONArray(keywords.toList)
-                    )
-                    val tweetJson = new JSONObject(tweetMap)
+                    val tweetKeywords = commonTokens map { tokenKeywordMap.get(_) }
+                    val tweetScore = predictSentiment(broadcastedModel.value, tweetTokens, hashingTF).toString()
+                    val tweetMap = tweetToMap(tweet)
+                    val scoredTweetMap = tweetMap + ("score" -> tweetScore, "keywords" -> new JSONArray(tweetKeywords.toList))
+                    val tweetJson = new JSONObject(scoredTweetMap)
                     val kafkaRecord = new ProducerRecord[String, Object](kakfaQueue, null, tweetJson.toString())
                     kafkaProducer.send(kafkaRecord)
-                }
-            }
+                })
+                kafkaProducer.close()
+            })
         })
         ssc.start()
         ssc.awaitTermination()
