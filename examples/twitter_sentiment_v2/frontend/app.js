@@ -3,6 +3,11 @@ var http   = require('http').Server(app);
 var io     = require('socket.io')(http);
 var fs     = require('fs');
 var kafka  = require('kafka-node');
+var _      = require('underscore');
+
+var numPartitions = 3;
+var kafkaTopic    = 'scored-tweets';
+var kafkaQueues   = _.range(numPartitions).map(function (i) { return { topic: kafkaTopic, partition: i } });
 
 var queue         = [];
 var queue_size    = 150;
