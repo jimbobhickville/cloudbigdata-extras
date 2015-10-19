@@ -8,14 +8,14 @@ var queue         = [];
 var queue_size    = 150;
 var dump_interval = 30000;
 var dump_timeout;
+
 var zk_port       = 2181;
 var zk_nodes      = [1, 2, 3].map(function (i) { return 'zookeeper-' + i + '.local:' + zk_port});
-var tweet_cache_json;
+
 var tweet_cache_path = '/tmp/tweet_cache.json';
 
 if (fs.existsSync(tweet_cache_path)) {
-    tweet_cache_json = fs.readFileSync(tweet_cache_path);
-    io.sockets.emit('tweets', tweet_cache_json);
+    io.sockets.emit('tweets', fs.readFileSync(tweet_cache_path));
 }
 
 var classifications = {
@@ -46,9 +46,9 @@ function classify(messages) {
 function dump_queue() {
     if (queue.length > 0) {
         console.log("Emitting queue to UI");
-        tweet_cache_json = JSON.stringify(classify(queue))
-        fs.writeFile(tweet_cache_path, tweet_cache_json);
-        io.sockets.emit('tweets', tweet_cache_json);
+        var queue_json = JSON.stringify(classify(queue))
+        fs.writeFile(tweet_cache_path, queue_json);
+        io.sockets.emit('tweets', queue_json);
         queue = [];
     }
     dump_timeout = setTimeout(dump_queue, dump_interval);
@@ -67,12 +67,14 @@ reset_kafka = function () {
         console.log("Got kafka error:", error);
         if (kafka_consumer) {
             try {
+                kafka_consumer.removeAllListeners();
                 kafka_consumer.close();
             } catch (e) {
                 console.log("Could not close kafka consumer:", e);
             }
         }
         try {
+            kafka_client.removeAllListeners();
             kafka_client.close();
         } catch (e) {
             console.log("Could not close kafka client:", e);
@@ -81,9 +83,7 @@ reset_kafka = function () {
     };
     kafka_client.on('error', on_error);
 
-    kafka_consumer = new kafka.HighLevelConsumer(kafka_client, [{
-       topic: 'scored-tweets'
-    }]);
+    kafka_consumer = new kafka.HighLevelConsumer(kafka_client, kafkaQueues);
     kafka_consumer.on('message', function (message) {
         console.log("Got message from kafka:", message)
         if (queue.length >= queue_size) {
@@ -97,7 +97,14 @@ reset_kafka = function () {
             console.log("ERROR parsing JSON:", e)
         }
     });
+
     kafka_consumer.on('error', on_error);
+    kafka_consumer.on('offsetOutOfRange', function (err) {
+        // no idea how this happens, but just start over if it does
+        // I can't find a way to get the max offset
+        console.log('Resetting offset for', err['topic'], 'partition:', err['partition']);
+        kafka_consumer.setOffset(err['topic'], err['partition'], 0);
+    });
 }
 
 reset_kafka();
