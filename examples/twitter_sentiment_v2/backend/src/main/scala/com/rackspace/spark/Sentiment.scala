@@ -40,6 +40,7 @@ object Sentiment {
     val twitterRefresh = 10
     val kafkaBrokers = "slave-1.local:6667,slave-2.local:6667,slave-3.local:6667"
     val kakfaQueue = "scored-tweets"
+    val numKafkaPartitions = 3
 
     def configureTwitterCredentials(apiKey: String, apiSecret: String, accessToken: String, accessTokenSecret: String) {
         val configs = new HashMap[String, String] ++= Seq(
@@ -150,9 +151,9 @@ object Sentiment {
         val props = new HashMap[String, Object]()
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaBrokers)
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
-        "org.apache.kafka.common.serialization.StringSerializer")
+                  "org.apache.kafka.common.serialization.StringSerializer")
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
-        "org.apache.kafka.common.serialization.StringSerializer")
+                  "org.apache.kafka.common.serialization.StringSerializer")
         new KafkaProducer[String, Object](props)
     }
 
@@ -182,6 +183,7 @@ object Sentiment {
             tweetsRDD.foreachPartition(tweetsRDDPartition => {
                 val hashingTF = new HashingTF()
                 val kafkaProducer = getKafkaProducer()
+                var counter = 0
                 tweetsRDDPartition.foreach(tweet => {
                     val tweetTokens = tokenize(tweet.getText())
                     val commonTokens = tweetTokens.toSet intersect keywordTokens
@@ -190,8 +192,13 @@ object Sentiment {
                     val tweetMap = tweetToMap(tweet)
                     val scoredTweetMap = tweetMap + ("score" -> tweetScore, "keywords" -> new JSONArray(tweetKeywords.toList))
                     val tweetJson = new JSONObject(scoredTweetMap)
-                    val kafkaRecord = new ProducerRecord[String, Object](kakfaQueue, null, tweetJson.toString())
+
+                    // the way that KafkaProducer round-robins partitions is by timebox, so since we only process one Dstream partition per kafka connection
+                    // we don't get very reliable balancing. Force round-robin by record by deciding the partition for kafka
+                    val partition = counter % numKafkaPartitions
+                    val kafkaRecord = new ProducerRecord[String, Object](kakfaQueue, partition, null, tweetJson.toString())
                     kafkaProducer.send(kafkaRecord)
+                    counter = counter + 1
                 })
                 kafkaProducer.close()
             })
