@@ -32,16 +32,6 @@ import twitter4j.Status
 
 object Sentiment {
 
-    val apiKey = ""
-    val apiSecret = ""
-    val accessToken = ""
-    val accessTokenSecret = ""
-
-    val twitterRefresh = 10
-    val kafkaBrokers = "slave-1.local:6667,slave-2.local:6667,slave-3.local:6667"
-    val kakfaQueue = "scored-tweets"
-    val numKafkaPartitions = 3
-
     def configureTwitterCredentials(apiKey: String, apiSecret: String, accessToken: String, accessTokenSecret: String) {
         val configs = new HashMap[String, String] ++= Seq(
             "apiKey" -> apiKey,
@@ -147,7 +137,7 @@ object Sentiment {
         )
     }
 
-    def getKafkaProducer(): KafkaProducer[String, Object] = {
+    def getKafkaProducer(kafkaBrokers: String): KafkaProducer[String, Object] = {
         val props = new HashMap[String, Object]()
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaBrokers)
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
@@ -162,12 +152,25 @@ object Sentiment {
         val sc = new SparkContext(conf)
         val sqlContext = new SQLContext(sc)
 
+        val apiKey = sc.getConf.get("spark.sentimentApp.apiKey")
+        val apiSecret = sc.getConf.get("spark.sentimentApp.apiSecret")
+        val accessToken = sc.getConf.get("spark.sentimentApp.accessToken")
+        val accessTokenSecret = sc.getConf.get("spark.sentimentApp.accessTokenSecret")
+
+        val twitterRefresh = sc.getConf.get("spark.sentimentApp.twitterRefresh").toInt
+        val kafkaBrokers = sc.getConf.get("spark.sentimentApp.kafkaBrokers")
+        val kafkaQueue = sc.getConf.get("spark.sentimentApp.kafkaQueue")
+        val numKafkaPartitions = sc.getConf.get("spark.sentimentApp.numKafkaPartitions").toInt
+
+        val keywords = sc.getConf.get("spark.sentimentApp.keywords")
+
         val broadcastedModel = sc.broadcast(prepareNBModel(sqlContext))
 
         configureTwitterCredentials(apiKey, apiSecret, accessToken, accessTokenSecret)
         val ssc = new StreamingContext(sc, Seconds(twitterRefresh))
-        var tokenKeywordMap = new HashMap[String, String];
-        args.foreach { keyword =>
+        var tokenKeywordMap = new HashMap[String, String]
+        val keywordsList = keywords.split(",").toList
+        keywordsList.foreach { keyword =>
             tokenize(keyword).foreach {
                 stem => {
                     tokenKeywordMap.put(stem, keyword)
@@ -175,15 +178,15 @@ object Sentiment {
             }
         }
         val keywordTokens = new HashSet(tokenKeywordMap.keySet())
-        val keywords = args.mkString(",")
         val filters = Array("track=".concat(keywords))
         val tweetsStream = TwitterUtils.createStream(ssc, None, filters)
 
         tweetsStream.foreachRDD(tweetsRDD => {
             tweetsRDD.foreachPartition(tweetsRDDPartition => {
                 val hashingTF = new HashingTF()
-                val kafkaProducer = getKafkaProducer()
                 var counter = 0
+                val kafkaProducer = getKafkaProducer(kafkaBrokers)
+
                 tweetsRDDPartition.foreach(tweet => {
                     val tweetTokens = tokenize(tweet.getText())
                     val commonTokens = tweetTokens.toSet intersect keywordTokens
@@ -196,7 +199,7 @@ object Sentiment {
                     // the way that KafkaProducer round-robins partitions is by timebox, so since we only process one Dstream partition per kafka connection
                     // we don't get very reliable balancing. Force round-robin by record by deciding the partition for kafka
                     val partition = counter % numKafkaPartitions
-                    val kafkaRecord = new ProducerRecord[String, Object](kakfaQueue, partition, null, tweetJson.toString())
+                    val kafkaRecord = new ProducerRecord[String, Object](kafkaQueue, partition, null, tweetJson.toString())
                     kafkaProducer.send(kafkaRecord)
                     counter = counter + 1
                 })
