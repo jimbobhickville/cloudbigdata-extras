@@ -2,22 +2,31 @@ var app    = require('express')();
 var http   = require('http').Server(app);
 var io     = require('socket.io')(http);
 var fs     = require('fs');
+var ini    = require('ini');
 var kafka  = require('kafka-node');
 var _      = require('underscore');
 
-var numPartitions = 3;
-var kafkaTopic    = 'scored-tweets';
+var opts = require('nomnom')
+    .option('conf', {
+        abbr: 'c',
+        help: 'Path to the config file'
+    })
+    .parse();
+
+var config = ini.parse(fs.readFileSync(opts.conf, 'utf-8'));
+
+var numPartitions = parseInt(config['spark.sentimentApp.numKafkaPartitions'], 10);
+var kafkaTopic    = config['spark.sentimentApp.kafkaQueue'];
 var kafkaQueues   = _.range(numPartitions).map(function (i) { return { topic: kafkaTopic, partition: i } });
 
 var queue         = [];
-var queue_size    = 150;
-var dump_interval = 30000;
+var queue_size    = parseInt(config['spark.sentimentApp.clientQueueSize'], 10);
+var dump_interval = parseInt(config['spark.sentimentApp.clientRefreshInterval'], 10) * 1000;
 var dump_timeout;
 
-var zk_port       = 2181;
-var zk_nodes      = [1, 2, 3].map(function (i) { return 'zookeeper-' + i + '.local:' + zk_port});
+var zk_nodes      = config['spark.sentimentApp.zookeeperHosts'];
 
-var tweet_cache_path = '/tmp/tweet_cache.json';
+var tweet_cache_path = config['spark.sentimentApp.clientQueueCache'];
 
 if (fs.existsSync(tweet_cache_path)) {
     io.sockets.emit('tweets', fs.readFileSync(tweet_cache_path));
@@ -64,8 +73,7 @@ dump_timeout = setTimeout(dump_queue, dump_interval);
 var kafka_consumer;
 var reset_kafka;
 reset_kafka = function () {
-    var kafka_connection_str = zk_nodes.join(',');
-    var kafka_client = new kafka.Client(kafka_connection_str,
+    var kafka_client = new kafka.Client(zk_nodes,
                                     'sentiment-analysis',
                                     { 'retries': 10 });
     var on_error = function (error) {
