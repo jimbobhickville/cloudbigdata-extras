@@ -30,6 +30,23 @@ import org.apache.spark.streaming.StreamingContext._
 
 import twitter4j.Status
 
+import org.apache.hadoop.conf.Configuration
+import org.apache.hadoop.fs.{FileSystem, Path}
+
+object Hdfs extends App {
+
+    def write(uri: String, filePath: String, data: Array[Byte]) = {
+        System.setProperty("HADOOP_USER_NAME", "hdfs")
+        val path = new Path(filePath)
+        val conf = new Configuration()
+        conf.set("fs.defaultFS", uri)
+        val fs = FileSystem.get(conf)
+        val os = fs.create(path)
+        os.write(data)
+        fs.close()
+    }
+}
+
 object Sentiment {
 
     def configureTwitterCredentials(apiKey: String, apiSecret: String, accessToken: String, accessTokenSecret: String) {
@@ -150,6 +167,11 @@ object Sentiment {
     def main(args: Array[String]) {
         val conf = new SparkConf().setAppName("SentimentApp")
         val sc = new SparkContext(conf)
+
+        // save job id to HDFS so we can kill it externally
+        Hdfs.write("hdfs://master-1.local:8020", "/apps/twitter_sentiment/job.id",
+                   sc.applicationId.getBytes)
+
         val sqlContext = new SQLContext(sc)
 
         val apiKey = sc.getConf.get("spark.sentimentApp.apiKey")
