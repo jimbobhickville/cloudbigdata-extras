@@ -52,26 +52,20 @@ object Sentiment {
         val set1 = sqlContext
             .read.format("com.databricks.spark.csv")
             .option("header", "true")
-            .load("hdfs://master-1.local:8020/apps/sentiment/full-corpus-1.csv")
-        val set2 = sqlContext
-            .read.format("com.databricks.spark.csv")
-            .option("header", "true")
             .load("hdfs://master-1.local:8020/apps/sentiment/dataset.csv")
-        val set3 = sqlContext
+        val set2 = sqlContext
             .read.format("com.databricks.spark.csv")
             .option("header", "true")
             .load("hdfs://master-1.local:8020/apps/sentiment/training.1600000.processed.noemoticon.csv")
 
-        val kaggle = set2.registerTempTable("kaggle_data")
+        val kaggle = set1.registerTempTable("kaggle_data")
         val df1 = sqlContext.sql("select * from kaggle_data where SentimentSource = 'Kaggle'")
-        val df2 = set1.drop("TweetDate")
-        val combined_df = df2.unionAll(df1)
 
-        val source3 = set3.registerTempTable("sentiment_data")
-        val df3 = sqlContext.sql("select ItemID, (case when Sentiment = 4 then Sentiment - 3 else Sentiment end) " +
+        val source2 = set2.registerTempTable("sentiment_data")
+        val df2 = sqlContext.sql("select ItemID, (case when Sentiment = 4 then Sentiment - 3 else Sentiment end) " +
           "as Sentiment, Query, SentimentText from sentiment_data")
 
-        val final_set = combined_df.unionAll(df3)
+        val final_set = df1.unionAll(df2)
 
         val hashingTF = new HashingTF()
 
