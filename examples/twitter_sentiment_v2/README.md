@@ -13,8 +13,8 @@ If you're using the ``lava`` command-line client, you'll need to add the script 
 the cluster.  Copy the id returned by the script create to fill in <script-id> in the cluster 
 create call:
 
-    lava scripts create sentiment-demo-install https://raw.githubusercontent.com/rackerlabs/cloudbigdata-extras/master/examples/twitter_sentiment_v2/bin/install.sh post-init
-    lava clusters create <cluster-name> KAFKA_SPARK_1_5 --node-group="slave(flavor=hadoop1-7,count=3) --scripts="<script-id>"
+    lava scripts create sentiment-demo-install https://raw.githubusercontent.com/rackerlabs/cloudbigdata-extras/master/examples/twitter_sentiment_v2/bin/install.sh post_init
+    lava clusters create <cluster-name> KAFKA_SPARK_1_5 --node-groups "slave(flavor=hadoop1-7,count=3) --user-script <script-id>
 
 This will ensure that all the required pieces are installed for you.  Once your
 cluster is up, you'll need to do a few additional steps:
@@ -103,14 +103,6 @@ need to take before you can run it again.
 
     [root@gateway-1 backend]# vi src/main/scala/com/rackspace/spark/Sentiment.scala
 
-## Re-compile the JAR
+## Re-build and restart the app
 
-    [root@gateway-1 backend]# sbt assembly
-
-## Put the new JAR into HDFS
-
-    [root@gateway-1 backend]# hdfs dfs -put -f ./target/scala-2.10/sentiment-project_2.10-1.0.jar /apps/twitter_sentiment/
-
-## Restart the job
-
-    [root@gateway-1 backend]# ../bin/manage.sh restart
+    [root@gateway-1 backend]# ../bin/manage.sh rebuild
