@@ -44,6 +44,15 @@ function restart() {
     start
 }
 
+function rebuild() {
+    echo "Rebuilding the app from local source and restarting the job"
+
+    cd "$APP_PATH/backend"
+    sbt assembly
+    sudo -u hdfs hdfs dfs -put -f ./target/scala-2.10/sentiment-project_2.10-assembly-1.0.jar $HDFS_PATH
+    restart
+}
+
 function print_usage() {
     echo "Usage: $0 [command]"
     echo "
@@ -65,6 +74,7 @@ function run_command() {
         "start" ) shift; start;;
         "stop" ) shift; stop;;
         "restart" ) shift; restart;;
+        "rebuild" ) shift; rebuild;;
         * )
             echo "'$1' not a valid command"
             exit 1

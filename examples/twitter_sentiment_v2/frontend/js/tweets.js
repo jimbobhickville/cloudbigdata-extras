@@ -6,13 +6,6 @@ function writeTweets(tweets) {
     $( "#negativeTweets" ).prepend(tweetHTML);
   }
 
-  $( "#neutralTweets" ).empty();
-  for (var key in tweets.neutral) {
-    var tweet = tweets.neutral[key];
-    var tweetHTML = generateTweetHtml(tweet);
-    $( "#neutralTweets" ).prepend(tweetHTML);
-  }
-
   $( "#positiveTweets" ).empty();
   for (var key in tweets.positive) {
     var tweet = tweets.positive[key];
