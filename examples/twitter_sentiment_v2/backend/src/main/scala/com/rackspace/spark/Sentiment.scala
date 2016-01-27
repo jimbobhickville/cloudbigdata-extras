@@ -52,11 +52,11 @@ object Sentiment {
         val set1 = sqlContext
             .read.format("com.databricks.spark.csv")
             .option("header", "true")
-            .load("hdfs://master-1.local:8020/apps/sentiment/dataset.csv")
+            .load("hdfs://master-1.local:8020/apps/twitter_sentiment/dataset.csv")
         val set2 = sqlContext
             .read.format("com.databricks.spark.csv")
             .option("header", "true")
-            .load("hdfs://master-1.local:8020/apps/sentiment/training.1600000.processed.noemoticon.csv")
+            .load("hdfs://master-1.local:8020/apps/twitter_sentiment/training.1600000.processed.noemoticon.csv")
 
         val kaggle = set1.registerTempTable("kaggle_data")
         val df1 = sqlContext.sql("select * from kaggle_data where SentimentSource = 'Kaggle'")
