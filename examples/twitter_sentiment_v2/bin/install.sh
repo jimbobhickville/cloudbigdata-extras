@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# we want the log to show the commands run
+set -x
+
 HOSTNAME=$(hostname -f)
 CBD_ROOT='/opt/cbd/cloudbigdata-extras'
-APP_PATH='${CBD_ROOT}/examples/twitter_sentiment_v2'
+APP_PATH="${CBD_ROOT}/examples/twitter_sentiment_v2"
 DATASETS_URL='http://pub.cloudbigdataplatform.com/twitter_datasets'
 DATA_PATH='/tmp/data'
 HDFS_PATH='/apps/twitter_sentiment'
@@ -28,15 +31,12 @@ if [ $HOSTNAME == "gateway-1.local" ]; then
 
         ln -fs ${APP_PATH}/frontend/node_modules/forever/bin/forever /usr/local/bin/
 
-        cd ${APP_PATH}/backend
-
         echo "Setting up the backend Spark job"
-        mkdir lib
-        cd lib
-        cp /usr/lib/spark/lib/spark-examples-*.jar ./
+        mkdir -p ${APP_PATH}/backend/lib
+        cp /usr/lib/spark/lib/spark-examples-*.jar ${APP_PATH}/backend/lib
 
         echo "Building the FAT JAR"
-        cd ..
+        cd ${APP_PATH}/backend
         sbt assembly
 
         echo "Adding application JAR to HDFS"
