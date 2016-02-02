@@ -40,17 +40,17 @@ if [ $HOSTNAME == "gateway-1.local" ]; then
         sbt assembly
 
         echo "Adding application JAR to HDFS"
-        sudo -u hdfs hdfs dfs -mkdir $HDFS_PATH
-        sudo -u hdfs hdfs dfs -put -f ./target/scala-2.10/sentiment-project_2.10-assembly-1.0.jar $HDFS_PATH
+        su -l hdfs -c "hdfs dfs -mkdir $HDFS_PATH"
+        su -l hdfs -c "hdfs dfs -put -f ${APP_PATH}/backend/target/scala-2.10/sentiment-project_2.10-assembly-1.0.jar $HDFS_PATH"
 
         echo "Downloading the sample data"
         mkdir $DATA_PATH
         for data_file in dataset.csv training.1600000.processed.noemoticon.csv; do
-            wget ${DATASETS_URL}/$data_file -O ${DATA_PATH}/$data_file
+            wget -nv ${DATASETS_URL}/$data_file -O ${DATA_PATH}/$data_file
         done
 
         echo "Putting the sample data into HDFS"
-        sudo -u hdfs hdfs dfs -put -f ${DATA_PATH}/*.csv $HDFS_PATH
+        su -l hdfs -c "hdfs dfs -put -f ${DATA_PATH}/*.csv $HDFS_PATH"
 
         echo "Copying spark-defaults into the app config"
         cat /etc/spark/conf/spark-defaults.conf >> ${APP_PATH}/conf/app.conf
