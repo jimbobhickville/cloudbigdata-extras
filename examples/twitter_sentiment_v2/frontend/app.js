@@ -9,6 +9,7 @@ var _      = require('underscore');
 var opts = require('nomnom')
     .option('conf', {
         abbr: 'c',
+        required: true,
         help: 'Path to the config file'
     })
     .parse();
@@ -19,6 +20,7 @@ var numPartitions = parseInt(config['spark.sentimentApp.numKafkaPartitions'], 10
 var kafkaTopic    = config['spark.sentimentApp.kafkaQueue'];
 var kafkaQueues   = _.range(numPartitions).map(function (i) { return { topic: kafkaTopic, partition: i } });
 
+var http_port     = config['spark.sentimentApp.httpPort'];
 var queue         = [];
 var queue_size    = parseInt(config['spark.sentimentApp.clientQueueSize'], 10);
 var dump_interval = parseInt(config['spark.sentimentApp.clientRefreshInterval'], 10) * 1000;
@@ -27,7 +29,6 @@ var dump_timeout;
 var zk_nodes      = config['spark.sentimentApp.zookeeperHosts'];
 
 var tweet_cache_path = config['spark.sentimentApp.clientQueueCache'];
-
 if (fs.existsSync(tweet_cache_path)) {
     io.sockets.emit('tweets', fs.readFileSync(tweet_cache_path));
 }
@@ -152,6 +153,6 @@ app.get('/js/chart.js', function(req, res){
 });
 
 
-http.listen(80, function(){
-  console.log('listening');
+http.listen(http_port, function(){
+  console.log('listening on port ' + http_port);
 });

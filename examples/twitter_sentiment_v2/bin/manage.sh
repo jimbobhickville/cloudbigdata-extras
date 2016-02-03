@@ -33,6 +33,7 @@ function start() {
     spark-submit \
         --properties-file "${APP_PATH}/conf/app.conf" \
         --class "com.rackspace.spark.Sentiment" \
+        --deploy-mode cluster \
         "${HDFS_PATH}/sentiment-project_2.10-assembly-1.0.jar"
 
     cd "$APP_PATH/frontend"
