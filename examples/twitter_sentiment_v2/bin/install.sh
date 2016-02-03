@@ -16,14 +16,17 @@ if [ $HOSTNAME == "gateway-1.local" ]; then
         curl https://bintray.com/sbt/rpm/rpm | tee /etc/yum.repos.d/bintray-sbt-rpm.repo
         yum install -y npm nodejs git sbt
 
-        echo "Opening port 80 for HTTP access"
-        iptables -A USER -p tcp --dport 80 -j ACCEPT
+        echo "Opening port 8080 for HTTP access"
+        iptables -A USER -p tcp --dport 8080 -j ACCEPT
         service iptables save
 
         echo "Installing the sentiment app"
         mkdir -p /opt/cbd
         cd /opt/cbd
         git clone https://github.com/rackerlabs/cloudbigdata-extras.git
+
+        echo "Making the management script executable by root only"
+        chmod 744 $APP_PATH/bin/manage.sh
 
         echo "Setting up the frontend node.js app"
         cd ${APP_PATH}/frontend

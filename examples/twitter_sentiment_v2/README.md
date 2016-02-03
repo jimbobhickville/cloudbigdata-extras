@@ -83,8 +83,9 @@ And if you just want to stop it entirely:
 # View the app
 
 Now that the app is running, you can view it in your browser by finding the public IP of your 
-gateway node and loading it in your browser.  You can also use the lava ssh proxy to set up a 
-Socks Proxy and load the website by visiting ``http://gateway-1.local``
+gateway node and loading it in your browser on port 8080 ``http://ip-address:8080``.  You can 
+also use the lava ssh proxy to set up a SOCKS Proxy and load the website by visiting 
+``http://gateway-1.local:8080``
 
 More info about the proxy options can be found here:
 
