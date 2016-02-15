@@ -30,7 +30,10 @@ if [ $HOSTNAME == "gateway-1.local" ]; then
 
         echo "Setting up the frontend node.js app"
         cd ${APP_PATH}/frontend
-        npm install express socket.io kafka-node underscore forever ini nomnom
+
+        # kafka-node depends on node-gyp which requires HOME to be set for some reason
+        # kafka-node 0.3.1 just plain doesn't work: https://github.com/SOHU-Co/kafka-node/pull/314
+        HOME=/root npm install express socket.io kafka-node@0.2.29 underscore forever ini nomnom
 
         ln -fs ${APP_PATH}/frontend/node_modules/forever/bin/forever /usr/local/bin/
 
